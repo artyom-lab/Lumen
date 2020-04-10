@@ -1,0 +1,653 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Lumen</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+		<link rel="stylesheet" href="css/style.css">
+	</head>
+	
+	<body class="row no-gutters">
+
+		<aside class="col-auto sidebar-1">
+			<div class="sidebar-top">
+				<div class="row align-items-center">
+					<div class="col">
+						<span class="logo-img"></span>
+						<a class="logo" href="index.html">
+							Lumen
+						</a>
+					</div>
+					<div class="col-auto">
+						<button class="sandwich" id="sandwich-1">
+					    <span></span>
+					  </button>
+					</div>
+				</div>
+			</div>
+			<div class="sidebar-bottom">
+				<a href="#!" class="network">
+					<div class="text-uppercase pb-2">Network</div>
+					<div class="fz-14">St. Joseph County</div>
+					<div class="fz-11">Legal Journals</div>
+					<i class="fas fa-chevron-right"></i>
+				</a>
+				<nav class="accordion-wrap">
+					<a href="#!" class="dashboard active">
+						<div class="row row-1 align-items-center">
+							<div class="col-auto">
+								<img src="img/icon-1.png" alt="" width="21">
+							</div>
+							<div class="col text-uppercase">Dashboard</div>
+						</div>
+					</a>
+
+					<div class="accordion accordion-1" id="accordionExample">
+					  <div class="pt-2">
+							<a href="#!" class="dashboard" data-toggle="collapse" data-target="#collapseOne">
+								<div class="row row-1 align-items-center">
+									<div class="col-auto">
+										<img src="img/icon-2.png" alt="" width="21">
+									</div>
+									<div class="col text-uppercase">Audience</div>
+								</div>
+								<i class="fas fa-chevron-right"></i>
+							</a>
+					    <div id="collapseOne" class="collapse" data-parent="#accordionExample">
+					      <div class="card-body">
+					        <a href="#!">Traffic</a> 
+					        <a href="#!">Geography</a> 
+					        <a href="#!">Stories</a> 
+					      </div>
+					    </div>
+					  </div>
+
+					  <div class="pt-2">
+			        <a href="#!" class="dashboard" data-toggle="collapse" data-target="#collapseTwo">
+								<div class="row row-1 align-items-center">
+									<div class="col-auto">
+										<img src="img/icon-3.png" alt="" width="21">
+									</div>
+									<div class="col text-uppercase">Influencers</div>
+								</div>
+								<i class="fas fa-chevron-right"></i>
+			      	</a>
+					    <div id="collapseTwo" class="collapse" data-parent="#accordionExample">
+					      <div class="card-body">
+					        <a href="#!">Organization</a> 
+					        <a href="#!">Types</a> 
+					      </div>
+					    </div>
+					  </div>
+
+					  <div class="pt-2">
+							<a href="#!" class="dashboard" data-toggle="collapse" data-target="#collapseThree">
+								<div class="row row-1 align-items-center">
+									<div class="col-auto">
+										<img src="img/icon-4.png" alt="" width="21">
+									</div>
+									<div class="col text-uppercase">Newsletters</div>
+								</div>
+								<i class="fas fa-chevron-right"></i>
+							</a>
+							<div id="collapseThree" class="collapse" data-parent="#accordionExample">
+					      <div class="card-body">
+					     		<a href="#!">Campaigns</a> 
+					        <a href="#!">Subscriptions</a> 
+					      </div>
+					    </div>
+					  </div>
+
+					  <div class="pt-2">
+							<a href="#!" class="dashboard" data-toggle="collapse" data-target="#collapseFour">
+								<div class="row row-1 align-items-center">
+									<div class="col-auto">
+										<img src="img/icon-5.png" alt="" width="21">
+									</div>
+									<div class="col text-uppercase">Social</div>
+								</div>
+								<i class="fas fa-chevron-right"></i>
+							</a>
+							<div id="collapseFour" class="collapse" data-parent="#accordionExample">
+					      <div class="card-body">
+					     		<a href="#!">Sharing</a> 
+					        <a href="#!">Campaigns</a> 
+					      </div>
+					    </div>
+					  </div>
+
+					  <div class="pt-2">
+							<a href="#!" class="dashboard" data-toggle="collapse" data-target="#collapseFive">
+								<div class="row row-1 align-items-center">
+									<div class="col-auto">
+										<img src="img/icon-6.png" alt="" width="21">
+									</div>
+									<div class="col text-uppercase">Pitches</div>
+								</div>
+								<i class="fas fa-chevron-right"></i>
+							</a>
+							<div id="collapseFive" class="collapse" data-parent="#accordionExample">
+					      <div class="card-body">
+					     		<a href="#!">1</a> 
+					        <a href="#!">2</a> 
+					      </div>
+					    </div>
+					  </div>
+
+					  <div class="pt-2">
+							<a href="#!" class="dashboard" data-toggle="collapse" data-target="#collapseSix">
+								<div class="row row-1 align-items-center">
+									<div class="col-auto">
+										<img src="img/icon-7.png" alt="" width="21">
+									</div>
+									<div class="col text-uppercase">Alerts</div>
+								</div>
+								<i class="fas fa-chevron-right"></i>
+							</a>
+							<div id="collapseSix" class="collapse" data-parent="#accordionExample">
+					      <div class="card-body">
+					     		<a href="#!">Sent</a> 
+					        <a href="#!">Sign-ups</a> 
+					      </div>
+					    </div>
+					  </div>
+
+					  <div class="pt-2">
+							<a href="#!" class="dashboard" data-toggle="collapse" data-target="#collapseSeven">
+								<div class="row row-1 align-items-center">
+									<div class="col-auto">
+										<img src="img/icon-8.png" alt="" width="21">
+									</div>
+									<div class="col text-uppercase">Administration</div>
+								</div>
+								<i class="fas fa-chevron-right"></i>
+							</a>
+							<div id="collapseSeven" class="collapse" data-parent="#accordionExample">
+					      <div class="card-body">
+					     		<a href="#!">Users</a> 
+					        <a href="#!">Accounts</a> 
+					      </div>
+					    </div>
+					  </div>
+					</div>
+
+					<div class="select-user">
+						<div class="row row-1 align-items-center">
+							<div class="col-auto">
+								<img src="img/icon-9.png" alt="" width="21">
+							</div>
+							<div class="col">
+					      <input type="text" class="form-control" placeholder="Select a User">
+							</div>
+						</div>
+					</div>
+
+
+
+
+
+				</nav>
+			</div>
+		</aside>
+
+		<main class="col d-flex flex-column">
+
+			<header class="navbar navbar-light bg-white sticky-top">
+				<div class="ml-auto position-relative d-inline-block mr-3 mr-sm-5">
+		      <a href="#!" id="reportrange">
+		        <span></span>
+		      </a>
+					<i class="fas fa-chevron-right"></i>
+				</div>
+				<a href="#!" class="avatar ml-3" style="background-image: url(img/avatar.jpg)"></a>
+				<button class="sandwich ml-3" id="sandwich-2">
+			    <span></span>
+			  </button>
+			</header>
+
+			<div class="row no-gutters col px-0">
+				<div class="col">
+
+					<section class="content">
+						<div class="row">
+							<div class="col-md-6 col-xl-5">
+								<div class="row">
+									<div class="col-sm-6">
+										<div class="cart cart-content text-center">
+											<div class="owl-1 owl-carousel owl-theme">
+												<div>
+													<div class="fz-13 text-uppercase red">Audience</div>
+													<div class="fz-30 font-weight-bold">85,376</div>
+													<div>Pageviews</div>
+												</div>
+												<div>
+													<div class="fz-13 text-uppercase red">Audience</div>
+													<div class="fz-30 font-weight-bold">85,376</div>
+													<div>Pageviews</div>
+												</div>
+												<div>
+													<div class="fz-13 text-uppercase red">Audience</div>
+													<div class="fz-30 font-weight-bold">85,376</div>
+													<div>Pageviews</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="col-sm-6">
+										<div class="cart cart-content cart-content-2 text-center">
+											<div class="owl-1 owl-carousel owl-theme text-white">
+												<div>
+													<div class="fz-13 text-uppercase">Newsletter</div>
+													<div class="fz-30 font-weight-bold">1,082</div>
+													<div>Sign-ups</div>
+												</div>
+												<div>
+													<div class="fz-13 text-uppercase">Newsletter</div>
+													<div class="fz-30 font-weight-bold">1,082</div>
+													<div>Sign-ups</div>
+												</div>
+												<div>
+													<div class="fz-13 text-uppercase">Newsletter</div>
+													<div class="fz-30 font-weight-bold">1,082</div>
+													<div>Sign-ups</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="col-sm-6">
+										<div class="cart cart-content cart-content-3 text-center">
+											<div class="owl-1 owl-carousel owl-theme text-white">
+												<div>
+													<div class="fz-13 text-uppercase">Alerts</div>
+													<div class="fz-30 font-weight-bold">80</div>
+													<div>Sent</div>
+												</div>
+												<div>
+													<div class="fz-13 text-uppercase">Alerts</div>
+													<div class="fz-30 font-weight-bold">80</div>
+													<div>Sent</div>
+												</div>
+												<div>
+													<div class="fz-13 text-uppercase">Alerts</div>
+													<div class="fz-30 font-weight-bold">80</div>
+													<div>Sent</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="col-sm-6">
+										<div class="cart cart-content cart-content-4 text-center">
+											<div class="owl-1 owl-carousel owl-theme text-white">
+												<div>
+													<div class="fz-13 text-uppercase">Social</div>
+													<div class="fz-30 font-weight-bold">25</div>
+													<div>Facebook Followers</div>
+												</div>
+												<div>
+													<div class="fz-13 text-uppercase">Social</div>
+													<div class="fz-30 font-weight-bold">25</div>
+													<div>Facebook Followers</div>
+												</div>
+												<div>
+													<div class="fz-13 text-uppercase">Social</div>
+													<div class="fz-30 font-weight-bold">25</div>
+													<div>Facebook Followers</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col">
+								<div class="cart">
+									<div class="cart-content">
+										<div class="row align-items-center">
+											<div class="col">
+												<div>Lorem</div>
+											</div>
+											<div class="col-auto">i</div>
+										</div>
+										<div class="row">
+											<div class="col">
+												<h2>85,376</h2>
+												<div>ipsum</div>
+											</div>
+											<div class="col-auto">
+												Canvas
+											</div>
+										</div>
+									</div>
+									<div class="block scroll-wrap">
+										<div class="scroll">
+											<div class="block">
+												<div class="row align-items-center">
+													<div class="col">
+														Lorem ipsum dolor sit amet
+													</div>
+													<div class="col-auto">2,322</div>
+												</div>
+											</div>
+											<div class="block">
+												<div class="row align-items-center">
+													<div class="col">
+														Lorem ipsum dolor sit amet
+													</div>
+													<div class="col-auto">2,322</div>
+												</div>
+											</div>
+											<div class="block">
+												<div class="row align-items-center">
+													<div class="col">
+														Lorem ipsum dolor sit amet
+													</div>
+													<div class="col-auto">2,322</div>
+												</div>
+											</div>
+											<div class="block">
+												<div class="row align-items-center">
+													<div class="col">
+														Lorem ipsum dolor sit amet
+													</div>
+													<div class="col-auto">2,322</div>
+												</div>
+											</div>
+											<div class="block">
+												<div class="row align-items-center">
+													<div class="col">
+														Lorem ipsum dolor sit amet
+													</div>
+													<div class="col-auto">2,322</div>
+												</div>
+											</div>
+											<div class="block">
+												<div class="row align-items-center">
+													<div class="col">
+														Lorem ipsum dolor sit amet
+													</div>
+													<div class="col-auto">2,322</div>
+												</div>
+											</div>
+											<div class="block">
+												<div class="row align-items-center">
+													<div class="col">
+														Lorem ipsum dolor sit amet
+													</div>
+													<div class="col-auto">2,322</div>
+												</div>
+											</div>
+											<div class="block">
+												<div class="row align-items-center">
+													<div class="col">
+														Lorem ipsum dolor sit amet
+													</div>
+													<div class="col-auto">2,322</div>
+												</div>
+											</div>
+											<div class="block">
+												<div class="row align-items-center">
+													<div class="col">
+														Lorem ipsum dolor sit amet
+													</div>
+													<div class="col-auto">2,322</div>
+												</div>
+											</div>
+											<div class="block">
+												<div class="row align-items-center">
+													<div class="col">
+														Lorem ipsum dolor sit amet
+													</div>
+													<div class="col-auto">2,322</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-3 col-xl-2-5">
+								<div class="row">
+									<div class="col-12">
+										<div class="cart">
+											<div class="cart-content">
+												<div class="row align-items-center">
+													<div class="col">
+														<div>Lorem</div>
+													</div>
+													<div class="col-auto">..</div>
+												</div>
+											</div>
+											<div class="block">
+												<div class="block">
+													<div class="row align-items-center">
+														<div class="col">
+															Lorem
+														</div>
+														<div class="col-auto">9,505</div>
+													</div>
+												</div>
+												<div class="block">
+													<div class="row align-items-center">
+														<div class="col">
+															Lorem
+														</div>
+														<div class="col-auto">9,505</div>
+													</div>
+												</div>
+												<div class="block">
+													<div class="row align-items-center">
+														<div class="col">
+															Lorem
+														</div>
+														<div class="col-auto">9,505</div>
+													</div>
+												</div>
+												<div class="block">
+													<div class="row align-items-center">
+														<div class="col">
+															Lorem
+														</div>
+														<div class="col-auto">9,505</div>
+													</div>
+												</div>
+												<div class="block">
+													<div class="row align-items-center">
+														<div class="col">
+															Lorem
+														</div>
+														<div class="col-auto">9,505</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="col-12">
+										<div class="cart">
+											<div class="cart-content">
+												<div class="row align-items-center">
+													<div class="col">
+														<div>Lorem</div>
+													</div>
+													<div class="col-auto">..</div>
+												</div>
+											</div>
+											<div class="block">
+												<div class="block">
+													<div class="row align-items-center">
+														<div class="col">
+															Lorem
+														</div>
+														<div class="col-auto">9,505</div>
+													</div>
+												</div>
+												<div class="block">
+													<div class="row align-items-center">
+														<div class="col">
+															Lorem
+														</div>
+														<div class="col-auto">9,505</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col">
+								<div class="cart cart-content">
+									<div class="row align-items-center">
+										<div class="col">
+											<div>Lorem</div>
+										</div>
+										<div class="col-auto">i</div>
+									</div>
+									<div class="canvas-wrap">
+										Canvas
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="cart">
+							<div class="cart-content">
+								<div class="row align-items-center">
+									<div class="col">
+										<div>Lorem ipsum</div>
+									</div>
+									<div class="col-auto">i</div>
+								</div>
+								<div class="row align-items-center">
+									<div class="col">
+										<div>Lorem</div>
+									</div>
+									<div class="col-auto">ipsum</div>
+								</div>
+							</div>
+							<div class="block scroll-wrap scroll-wrap-2">
+								<div class="scroll">
+									<div class="block">
+										<div class="row align-items-center">
+											<div class="col">
+												Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+											</div>
+											<div class="col-auto">612</div>
+										</div>
+									</div>
+									<div class="block">
+										<div class="row align-items-center">
+											<div class="col">
+												Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+											</div>
+											<div class="col-auto">612</div>
+										</div>
+									</div>
+									<div class="block">
+										<div class="row align-items-center">
+											<div class="col">
+												Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+											</div>
+											<div class="col-auto">612</div>
+										</div>
+									</div>
+									<div class="block">
+										<div class="row align-items-center">
+											<div class="col">
+												Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+											</div>
+											<div class="col-auto">612</div>
+										</div>
+									</div>
+									<div class="block">
+										<div class="row align-items-center">
+											<div class="col">
+												Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+											</div>
+											<div class="col-auto">612</div>
+										</div>
+									</div>
+									<div class="block">
+										<div class="row align-items-center">
+											<div class="col">
+												Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+											</div>
+											<div class="col-auto">612</div>
+										</div>
+									</div>
+									<div class="block">
+										<div class="row align-items-center">
+											<div class="col">
+												Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+											</div>
+											<div class="col-auto">612</div>
+										</div>
+									</div>
+									<div class="block">
+										<div class="row align-items-center">
+											<div class="col">
+												Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+											</div>
+											<div class="col-auto">612</div>
+										</div>
+									</div>
+									<div class="block">
+										<div class="row align-items-center">
+											<div class="col">
+												Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+											</div>
+											<div class="col-auto">612</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</section>
+
+				</div>
+
+				<aside class="col-auto sidebar-2">
+					<div class="block">
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste perferendis, sequi saepe sunt, eligendi maxime odio, voluptatem laborum exercitationem quibusdam quod tenetur porro provident, atque. Perspiciatis, aliquid! Nisi, sed vitae!
+					</div>
+					<div class="block">
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore incidunt itaque, repudiandae, facere a dolores expedita quo explicabo ad, obcaecati rem quibusdam non saepe? Obcaecati atque illo consectetur provident consequatur.
+					</div>
+					<div class="block scroll-wrap">
+						<div class="scroll">
+							<div class="block-wrap">
+								<div class="block">
+									Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis inventore aliquid repudiandae quis minima neque, corporis ipsum soluta ex adipisci sed, deleniti non ducimus temporibus nisi voluptate autem animi iste.
+								</div>
+								<div class="block">
+									Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur reiciendis maiores maxime quos voluptas iste, vel deleniti tempora a officiis repudiandae natus voluptatem facilis. Perspiciatis, animi temporibus consequuntur at accusamus!
+								</div>
+								<div class="block">
+									Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus officia obcaecati libero quisquam ratione itaque eos neque, dicta ipsum saepe esse error, perspiciatis reiciendis, dolor nobis reprehenderit unde! Sint, ipsam!
+								</div>
+								<div class="block">
+									Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus officia obcaecati libero quisquam ratione itaque eos neque, dicta ipsum saepe esse error, perspiciatis reiciendis, dolor nobis reprehenderit unde! Sint, ipsam!
+								</div>
+								<div class="block">
+									Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus officia obcaecati libero quisquam ratione itaque eos neque, dicta ipsum saepe esse error, perspiciatis reiciendis, dolor nobis reprehenderit unde! Sint, ipsam!
+								</div>
+							</div>
+						</div>
+					</div>
+				</aside>
+				
+			</div>
+
+		</main>
+		
+		<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.js"></script>
+	  <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+  	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+		<script src="js/common.js"></script>
+	</body>
+</html>

@@ -1,0 +1,375 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap')
+
+$transition: .3s
+$box: 0 1px 1px rgba(0, 0, 0, .1)
+
+.red
+	color: #fc5c5c
+
+body
+	font-family: 'Roboto', sans-serif
+	font-size: 12px
+	color: #222222
+	background-color: #EFEFF4
+	min-height: 100vh
+	&.menubar-1
+		@media (min-width: 992px)
+			.sidebar-1
+				margin-left: -220px
+		@media (max-width: 991.98px)
+			overflow: hidden
+			.sidebar-1, .navbar, .content, .sidebar-2
+				transform: translateX(220px)
+	&.menubar-2
+		@media (max-width: 1439.98px)
+			overflow: hidden
+			.sidebar-1, .navbar, .content, .sidebar-2
+				transform: translateX(-300px)
+				@media (max-width: 349.98px)
+					transform: translateX(-270px)
+
+* 
+	outline: none !important
+
+a
+	transition: $transition
+	&:hover 
+		text-decoration: none
+		opacity: .6
+
+img
+	max-width: 100%
+	height: auto
+
+.row:not(.no-gutters)
+	margin-left: -10px
+	margin-right: -10px
+	> [class*="col"]
+		padding-left: 10px
+		padding-right: 10px
+
+@media (min-width: 1200px)
+	.col-xl-2-5
+		flex: 0 0 20.833333%
+		max-width: 20.833333%
+
+.sidebar-1, .navbar, .content, .sidebar-2
+	transition: $transition
+
+.sidebar-1
+	position: sticky
+	width: 220px
+	top: 0
+	bottom: 0
+	max-height: 100vh
+	color: #fff
+	background-color: #323b42
+	display: flex
+	flex-direction: column
+	box-shadow: $box
+	z-index: 1030
+	@media (max-width: 991.98px)	
+		position: fixed
+		right: 100%
+	.sidebar-top
+		padding: 10px 15px
+		.logo 
+			font-size: 28px
+			color: #fff
+			vertical-align: middle
+		.logo-img
+			width: 10px
+			display: inline-block
+			height: 10px
+			border-radius: 100px
+			background: linear-gradient(to bottom, #ffae34 0%, #e08025 100%)
+			vertical-align: middle
+			margin-right: 4px
+			&:before, &:after
+				content: ''
+				position: absolute
+				top: 4px
+				width: 10px
+				height: 10px
+				border-radius: 100px
+				background: linear-gradient(to bottom, #fd5170 0%, #fa1d42 100%)
+			&:after
+				top: 28px
+				background: linear-gradient(to bottom, #378dff 0%, #1c65df 100%)
+	.sidebar-bottom
+		flex-grow: 1
+		overflow: auto
+		&::-webkit-scrollbar
+			display: none
+		.network
+			padding: 15px
+			display: block
+			background-color: #242B30
+			color: #fff
+			position: relative
+			.fa-chevron-right
+				position: absolute
+				top: 50%
+				transform: translateY(-50%)
+				right: 15px
+		.accordion-wrap
+			padding: 15px
+			padding-left: 10px
+			.dashboard
+				display: block
+				color: #FFF
+				padding: 2px 6px
+				position: relative
+				&:before 
+					content: ""
+					position: absolute
+					transition: $transition
+					top: 0
+					bottom: 0
+					left: 0
+					right: 0
+					border-radius: 100px 0 0 100px
+					background: linear-gradient(to right, #51606e 0%, #323b42 100%)
+					opacity: 0		
+				&:hover, &.active
+					opacity: 1
+					&:before 
+						opacity: 1
+			.select-user
+				padding: 8px 0 8px 6px
+				.form-control					
+					border-radius: 100px
+					font-size: 12px
+					padding-bottom: 0
+					padding-top: 0
+					height: 27px
+					&:focus
+						box-shadow: none
+
+.accordion-1
+	.card-body
+		padding: 2px 0 0 35px
+		a 
+			display: block
+			color: #FFF
+			padding-bottom: 6px
+	.dashboard
+		.fa-chevron-right
+			position: absolute
+			top: 50%
+			transform: translateY(-50%)
+			right: 0
+			transition: $transition
+		&[aria-expanded="true"]
+			.fa-chevron-right
+				transform: translateY(-50%) rotate(90deg)
+
+.sidebar-2
+	width: 300px
+	box-shadow: $box
+	background-color: #fff
+	display: flex
+	flex-direction: column
+	bottom: 0
+	overflow: hidden
+	position: sticky
+	top: 62px
+	max-height: calc(100vh - 62px)
+	@media (max-width: 1439.98px)	
+		position: fixed
+		top: 0
+		max-height: 100vh
+		left: 100%
+		z-index: 1030
+	@media (max-width: 767.98px)
+		overflow: auto
+		.scroll-wrap
+			overflow: initial
+		.scroll
+			overflow: initial
+			padding-right: 0
+	@media (max-width: 349.98px)
+		width: 270px
+
+.content
+	padding: 20px 20px 0
+	@media (max-width: 575.98px)
+		padding: 15px 15px 0
+
+.navbar
+	padding: 1rem 20px
+	box-shadow: $box
+	@media (max-width: 575.98px)	
+		padding-left: 15px
+		padding-right: 15px
+
+.avatar
+	width: 30px
+	height: 30px
+	border-radius: 4px
+	background-color: #DEDEDE
+	background-size: cover
+	background-position: center center
+	display: block
+
+.sandwich
+	color: inherit
+	display: block
+	cursor: pointer
+	padding: 0
+	border: 0
+	background: transparent
+	transition: $transition
+	&:before, &:after
+		content: ''
+	span, &:after
+		margin-top: 4px
+	span, &:before, &:after
+		width: 20px
+		display: block
+		transition: $transition
+		transform-origin: left center
+		border-top: 2px solid
+	&.active
+		&:before
+			transform: translateX(3px) translateY(-1px) rotate(45deg)
+		span
+			width: 0
+			opacity: 0
+		&:after
+			transform: translateX(3px) translateY(1px) rotate(-45deg)
+	&:hover 
+		opacity: .8
+#sandwich-1
+	&.active
+		color: initial
+		transform: translateX(55px)
+	@media (max-width: 991.98px)
+		color: initial
+		transform: translateX(55px)
+	@media (max-width: 575.98px)
+		transform: translateX(50px) !important
+#sandwich-2
+	@media (min-width: 1440px)
+		display: none
+
+.block
+	padding: 15px
+	+ .block 
+		border-top: 1px solid #DEDEDE
+	.block 
+		padding-left: 0
+		padding-right: 0
+
+.scroll-wrap
+	flex-grow: 1
+	flex-basis: 0
+	display: flex
+	flex-direction: column
+	overflow: hidden
+	min-height: 110px
+.scroll-wrap-2
+	min-height: 218px
+.scroll
+	height: 100%
+	overflow: auto
+	flex-grow: 1
+	padding-right: 15px
+	&::-webkit-scrollbar
+		width: 4px
+		height: 4px
+	&::-webkit-scrollbar-track
+		background-color: transparent
+		border-radius: 2px
+	&::-webkit-scrollbar-thumb
+		background-color: #F1F1F6
+		border-radius: 2px
+.block-wrap
+	margin-top: -15px
+	margin-bottom: -15px
+
+.cart
+	display: flex
+	flex-direction: column
+	border-radius: 8px
+	background-color: #fff
+	box-shadow: $box
+	margin-bottom: 20px
+	height: calc(100% - 20px)
+	@media (max-width: 575.98px)
+		margin-bottom: 15px
+		height: calc(100% - 15px)
+	.block 
+		padding: 5px 15px 5px 0
+		.block
+			padding-left: 15px
+			padding-right: 0
+		&:not(.scroll-wrap)
+			padding-right: 0
+			.block
+				padding-right: 15px
+.cart-content
+	padding: 15px
+.cart-content-2
+	background: linear-gradient(to bottom, #c434fe 0%, #a502ea 100%)
+.cart-content-3
+	background: linear-gradient(to bottom, #f69e22 0%, #f09513 100%)
+.cart-content-4
+	background: linear-gradient(to bottom, #53b7f7 0%, #39abef 100%)
+
+
+.canvas-wrap
+	flex-grow: 1
+
+.fz-30
+	font-size: 30px
+.fz-14
+	font-size: 14px
+.fz-13
+	font-size: 13px
+.fz-11
+	font-size: 11px
+
+#reportrange
+	color: #222222	
+	+ .fa-chevron-right
+		position: absolute
+		top: 6px
+		transform: translateY(-50%) rotate(90deg)
+		right: -11px
+		transition: $transition
+		font-size: 9px
+	&:hover
+		+ .fa-chevron-right
+			opacity: .6
+
+.daterangepicker
+	top: 54px !important
+	right: 20px !important
+	&:before, &:after 
+		display: none
+
+.row-1
+	line-height: 2
+	margin-left: -4px !important
+	margin-right: -4px !important
+	> [class*="col"]
+		padding-left: 4px !important
+		padding-right: 4px !important
+
+.owl-carousel
+	&.owl-theme
+		.owl-dots
+			margin-top: 0 !important
+			.owl-dot 
+				span
+					background: rgba(239, 239, 239, .5)
+					border: 1px solid rgba(239, 239, 239, .5)
+					transition: $transition
+					width: 6px
+					height: 6px
+					margin: 12px 2px 0
+				&.active, &:hover
+					span
+						background: #FFF
+						border: 1px solid rgba(239, 239, 239, .5)
