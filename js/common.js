@@ -29,5 +29,7 @@ $('#reportrange').daterangepicker({
 
 cb(start, end);
 
+$('[data-toggle="tooltip"]').tooltip();
+
 });
 
