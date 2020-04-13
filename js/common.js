@@ -74,10 +74,10 @@ var data  = {
       pointBorderWidth: 3,
       pointBorderColor: 'transparent',
       pointBackgroundColor: 'transparent',
-      pointHoverRadius: 9,
-      pointHoverBorderWidth: 5,
+      pointHoverRadius: 5,
+      pointHoverBorderWidth: 3,
       pointHoverBorderColor: '#fff',
-      pointHoverBackgroundColor: '#76e288',
+      pointHoverBackgroundColor: 'transparent',
       borderColor: gradient2,
       data: [7, 7.5, 4.8, 6, 7.7, 6, 6.2, 5.7, 7.4, 7.7, 10, 12.678, 8.5, 7.5, 9, 8.8, 10.2, 0.7, 0.6, 2.5, 7.5, 8, 7.2, 13, 10.5, 11.3, 12.2, 12.2, 14, 13, 13],
     }]
@@ -90,11 +90,15 @@ var options = {
     xAxes: [{
       ticks: {
         padding: 10,
+        // userCallback: function(tick) {
+        //   return tick.toString() + 'k';
+        // },
       },
       gridLines: {
         display: false,
         drawTicks: false,
         drawBorder: false,
+
       }
     }],
 
@@ -215,7 +219,6 @@ var chartInstance2 = new Chart(chart2, {
   data: data2,
   options: options2
 });
-
 
 });
 
