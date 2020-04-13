@@ -268,7 +268,8 @@ img {
   display: flex;
   flex-direction: column;
   overflow: hidden;
-  min-height: 110px; }
+  min-height: 110px;
+  border-top: 1px solid #DEDEDE; }
 
 .scroll-wrap-2 {
   min-height: 218px; }
@@ -321,13 +322,10 @@ img {
   background: linear-gradient(to bottom, #c434fe 0%, #a502ea 100%); }
 
 .cart-content-3 {
-  background: linear-gradient(to bottom, #f69e22 0%, #f09513 100%); }
+  background: linear-gradient(to right, #fda52d 0%, #e88903 100%); }
 
 .cart-content-4 {
-  background: linear-gradient(to bottom, #53b7f7 0%, #39abef 100%); }
-
-.canvas-wrap {
-  flex-grow: 1; }
+  background: linear-gradient(to left, #6ac4fd 0%, #0d96e2 100%); }
 
 .fz-30 {
   font-size: 30px; }
@@ -350,6 +348,9 @@ img {
 .lh-12 {
   line-height: 1.2; }
 
+.lh-1 {
+  line-height: 1; }
+
 #reportrange {
   color: #222222; }
   #reportrange + .fa-chevron-right {
@@ -364,7 +365,8 @@ img {
 
 .daterangepicker {
   top: 54px !important;
-  right: 20px !important; }
+  right: 20px !important;
+  position: fixed; }
   .daterangepicker:before, .daterangepicker:after {
     display: none; }
 
@@ -396,6 +398,12 @@ img {
 .owl-2.owl-theme img {
   width: 11px;
   display: inline-block; }
+
+.owl-3.owl-theme .owl-dots {
+  display: inline-block;
+  position: absolute;
+  left: 14px;
+  top: -30px; }
 
 .fas-2 {
   font-size: 8px;
@@ -434,7 +442,8 @@ img {
   width: 8px;
   height: 8px;
   border-radius: 100px;
-  display: inline-block; }
+  display: inline-block;
+  margin-right: 2px; }
 
 .colorpoint-1 {
   background: linear-gradient(to bottom, #fd5170 0%, #fa1d42 100%); }
@@ -451,6 +460,9 @@ img {
 .colorpoint-5 {
   background: linear-gradient(to bottom, #882bf4 0%, #591c9f 100%); }
 
+.colorpoint-6 {
+  background: linear-gradient(to bottom, #fdd300 0%, #e8b200 100%); }
+
 .pills {
   display: inline-block;
   border-radius: 100px;
@@ -459,5 +471,104 @@ img {
 
 .tooltip-inner {
   font-size: 10px; }
+
+.p-15 {
+  padding: 15px 15px 0; }
+
+.linesteps .colorpoint {
+  position: relative; }
+  .linesteps .colorpoint:before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 40px;
+    border-left: 1px dotted #dedede;
+    transform: translateX(-50%);
+    z-index: -1; }
+.linesteps > [class*=col] > .row:last-child .colorpoint:before, .linesteps > [class*=col] th:last-child .colorpoint:before, .linesteps tr > .row:last-child .colorpoint:before, .linesteps tr th:last-child .colorpoint:before {
+  display: none; }
+
+.table-1 th, .table-1 td {
+  padding-left: 2px;
+  padding-right: 2px;
+  vertical-align: middle; }
+.table-1 tr th:last-child, .table-1 tr td:last-child {
+  text-align: right; }
+.table-1 tr th:nth-child(3) {
+  text-align: center; }
+.table-1 .progress {
+  width: 100%;
+  min-width: 130px;
+  height: 8px;
+  border-radius: 100px;
+  position: relative;
+  background: #FFF;
+  border: 1px solid #cbcbcb;
+  overflow: visible; }
+  .table-1 .progress:before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 4px;
+    height: 4px;
+    border-radius: 100px;
+    background: #FFF;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.5); }
+  .table-1 .progress .progress-bar {
+    background: #fd8741;
+    height: 14px;
+    margin-top: -4px;
+    margin-bottom: -4px;
+    border-top-left-radius: 7px;
+    border-bottom-left-radius: 7px; }
+  .table-1 .progress .progress-bar-2 {
+    background: #33f456; }
+  .table-1 .progress .progress-bar-3 {
+    background: #fd5446; }
+  .table-1 .progress .bar {
+    position: absolute;
+    color: #000;
+    font-size: 15px;
+    text-align: center;
+    line-height: 25px;
+    font-weight: bold;
+    top: 50%;
+    left: 65%;
+    transform: translateY(-50%);
+    width: 25px;
+    height: 25px;
+    border: 1px solid #cbcbcb;
+    border-radius: 100px;
+    background: #FFF;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.5); }
+  .table-1 .progress .bar-2 {
+    left: 28%; }
+  .table-1 .progress .bar-3 {
+    left: 82%; }
+  .table-1 .progress .bar-4 {
+    left: 15%; }
+  .table-1 .progress .bar-5 {
+    left: 25%; }
+  .table-1 .progress .bar-6 {
+    left: 75%; }
+
+.canvas-wrap {
+  flex-grow: 1;
+  position: relative;
+  margin-top: 16px;
+  min-height: 200px; }
+  .canvas-wrap canvas {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0; }
+
+.canvas-wrap-2 {
+  margin: 16px 16px 0;
+  max-height: 60px; }
 
 /*# sourceMappingURL=style.css.map */
