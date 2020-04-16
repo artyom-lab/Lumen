@@ -107,7 +107,8 @@ img {
         background: linear-gradient(to bottom, #378dff 0%, #1c65df 100%); }
   .sidebar-1 .sidebar-bottom {
     flex-grow: 1;
-    overflow: auto; }
+    overflow: auto;
+    padding-bottom: 70px; }
     .sidebar-1 .sidebar-bottom::-webkit-scrollbar {
       display: none; }
     .sidebar-1 .sidebar-bottom .network {
