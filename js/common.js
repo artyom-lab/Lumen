@@ -1,40 +1,44 @@
 $(document).ready(function() {
 
-  $(".owl-1").owlCarousel({
-    items: 1,
-    smartSpeed: 1000,
-  });
+// $(".owl-1").owlCarousel({
+//   items: 1,
+//   smartSpeed: 1200,
+// });
 
-  var owl3 = $(".owl-3");
-  owl3.owlCarousel({
-    items: 1,
-    smartSpeed: 1000,
-    touchDrag: false,
-    mouseDrag: false,
-    loop: true
-  });
+// var owl1 = $(".owl-1");
+$(".owl-1").owlCarousel({
+  items: 1,
+  smartSpeed: 1200,
+  touchDrag: false,
+  mouseDrag: false,
+  // loop: true
+});
 
-  $('.click-slide').click(function() {
-    owl3.trigger('next.owl.carousel');
-})
+// $('.click-slide').click(function() {
+//   owl3.trigger('next.owl.carousel');
+// });
 
-	$("#sandwich-1").on("click", function(){
-		$(this).toggleClass("active");
-		$("body").toggleClass("menubar-1");
-    window.dispatchEvent(new Event('resize'));
-	});
+$("#sandwich-1").on("click", function(){
+	$(this).toggleClass("active");
+	$("body").toggleClass("menubar-1");
+  window.dispatchEvent(new Event('resize'));
+});
 
-	$("#sandwich-2").on("click", function(){
-		$(this).toggleClass("active");
-		$("body").toggleClass("menubar-2");
-	});
+$("#sandwich-2").on("click", function(){
+	$(this).toggleClass("active");
+	$("body").toggleClass("menubar-2");
+});
 
-var start = moment("05/12/2019");
-var end = moment("06/11/2019");
+Waves.attach('.wave', ['waves-light']);
+Waves.attach('.wave2', ['waves-dark']);
+Waves.init();
+
+var start = moment("05/12/2019"),
+    end   = moment("06/11/2019");
 
 function cb(start, end) {
     $('#reportrange').html(start.format('MMM D, YYYY') + ' - ' + end.format('MMM D, YYYY'));
-}
+};
 
 $('#reportrange').daterangepicker({
     startDate: start,
@@ -45,9 +49,31 @@ cb(start, end);
 
 $('[data-toggle="tooltip"]').tooltip();
 
+const ShadowLineElement = Chart.elements.Line.extend({
+  draw () {   
+    const { ctx } = this._chart
+    const originalStroke = ctx.stroke
+    ctx.stroke = function () {
+      ctx.save()
+      ctx.shadowOffsetX = 0
+      ctx.shadowOffsetY = 1
+      ctx.shadowBlur = 2
+      ctx.shadowColor = 'rgba(0, 0, 0, .35)'
+      originalStroke.apply(this, arguments)
+      ctx.restore()
+    }
+    Chart.elements.Line.prototype.draw.apply(this, arguments)
+    ctx.stroke = originalStroke;
+  }
+})
+
+Chart.defaults.ShadowLine = Chart.defaults.line
+Chart.controllers.ShadowLine = Chart.controllers.line.extend({
+  datasetElementType: ShadowLineElement
+})
 
 var chart    = document.getElementById('canvas').getContext('2d'),
-    gradient = chart.createLinearGradient(0, 0, 0, 320);
+    gradient = chart.createLinearGradient(0, 0, 0, 320),
     gradient2 = chart.createLinearGradient(0, 0, 0, 320);
 
 gradient.addColorStop(0, 'rgba(233, 233, 237, 1)');
@@ -69,7 +95,7 @@ var data  = {
     datasets: [{
       label: '',
       backgroundColor: gradient,
-      borderWidth: 6,
+      borderWidth: 7,
       pointRadius: 5,
       pointBorderWidth: 3,
       pointBorderColor: 'transparent',
@@ -136,18 +162,19 @@ var options = {
     xPadding: 10,
     caretSize: 0,
     caretPadding: 20,
-    backgroundColor: '#fff',
+    backgroundColor: '#f8f9f8',
     titleFontColor: '#222222',
     bodyFontColor: '#222222',
     titleFontStyle: 'normal',
     bodyFontStyle: 'bold',
     borderWidth: 2,
     cornerRadius: 4,
+    borderColor: 'rgba(242, 242, 242, 0.5)'
   },
 };
 
 var chartInstance = new Chart(chart, {
-  type: 'line',
+  type: 'ShadowLine',
   data: data,
   options: options
 });
@@ -167,7 +194,7 @@ var data2  = {
     datasets: [{
       label: '',
       fill: false,
-      borderWidth: 4,
+      borderWidth: 5,
       pointRadius: 0,
       pointBorderWidth: 0,
       pointBorderColor: 'transparent',
@@ -215,7 +242,7 @@ var options2 = {
 };
 
 var chartInstance2 = new Chart(chart2, {
-  type: 'line',
+  type: 'ShadowLine',
   data: data2,
   options: options2
 });
