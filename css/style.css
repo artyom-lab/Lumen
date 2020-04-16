@@ -123,13 +123,14 @@ img {
         transform: translateY(-50%);
         right: 15px; }
     .sidebar-1 .sidebar-bottom .accordion-wrap {
-      padding: 15px;
-      padding-left: 10px; }
+      padding: 15px 0 15px 10px; }
       .sidebar-1 .sidebar-bottom .accordion-wrap .dashboard {
         display: block;
         color: #FFF;
-        padding: 2px 6px;
-        position: relative; }
+        padding: 2px 30px 2px 6px;
+        position: relative;
+        border-radius: 100px 0 0 100px;
+        overflow: hidden; }
         .sidebar-1 .sidebar-bottom .accordion-wrap .dashboard:before {
           content: "";
           position: absolute;
@@ -138,7 +139,6 @@ img {
           bottom: 0;
           left: 0;
           right: 0;
-          border-radius: 100px 0 0 100px;
           background: linear-gradient(to right, #51606e 0%, #323b42 100%);
           opacity: 0; }
         .sidebar-1 .sidebar-bottom .accordion-wrap .dashboard:hover, .sidebar-1 .sidebar-bottom .accordion-wrap .dashboard.active {
@@ -146,7 +146,7 @@ img {
           .sidebar-1 .sidebar-bottom .accordion-wrap .dashboard:hover:before, .sidebar-1 .sidebar-bottom .accordion-wrap .dashboard.active:before {
             opacity: 1; }
       .sidebar-1 .sidebar-bottom .accordion-wrap .select-user {
-        padding: 8px 0 8px 6px; }
+        padding: 8px 15px 8px 6px; }
         .sidebar-1 .sidebar-bottom .accordion-wrap .select-user .form-control {
           border-radius: 100px;
           font-size: 12px;
@@ -166,7 +166,7 @@ img {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  right: 0;
+  right: 15px;
   transition: 0.3s; }
 .accordion-1 .dashboard[aria-expanded="true"] .fa-chevron-right {
   transform: translateY(-50%) rotate(90deg); }
