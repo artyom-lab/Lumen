@@ -25,7 +25,8 @@ body
 				margin-left: -220px
 		@media (max-width: 991.98px)
 			overflow: hidden
-			transform: translateX(220px)
+			.sidebar-1, .navbar, .content, .sidebar-2
+				transform: translateX(220px)
 	&.menubar-2
 		@media (max-width: 1199.98px)
 			overflow: hidden
@@ -202,6 +203,7 @@ img
 
 .content
 	padding: 20px 20px 0
+	min-height: calc(100vh - 62px)
 	@media (max-width: 575.98px)
 		padding: 15px 15px 0
 
@@ -367,7 +369,9 @@ img
 	top: 54px !important
 	right: 20px !important
 	position: fixed
-	&:before, &:after 
+	overflow: auto
+	max-height: calc(100vh - 62px)
+	&:before, &:after, .drp-selected
 		display: none
 
 .row-1
@@ -389,10 +393,11 @@ img
 					transition: $transition
 					width: 6px
 					height: 6px
-					margin: 4px 2px 0
+					margin: 4px 2px 2px
 				&.active, &:hover
 					span
 						background: #FFF
+						box-shadow: inset 0 1px 1px rgba(0, 0, 0, .5)
 
 .owl-2 
 	&.owl-theme

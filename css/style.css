@@ -23,8 +23,9 @@ body {
         margin-left: -220px; } }
   @media (max-width: 991.98px) {
     body.menubar-1 {
-      overflow: hidden;
-      transform: translateX(220px); } }
+      overflow: hidden; }
+      body.menubar-1 .sidebar-1, body.menubar-1 .navbar, body.menubar-1 .content, body.menubar-1 .sidebar-2 {
+        transform: translateX(220px); } }
   @media (max-width: 1199.98px) {
     body.menubar-2 {
       overflow: hidden; }
@@ -202,7 +203,8 @@ img {
       width: 270px; } }
 
 .content {
-  padding: 20px 20px 0; }
+  padding: 20px 20px 0;
+  min-height: calc(100vh - 62px); }
   @media (max-width: 575.98px) {
     .content {
       padding: 15px 15px 0; } }
@@ -387,8 +389,10 @@ img {
 .daterangepicker {
   top: 54px !important;
   right: 20px !important;
-  position: fixed; }
-  .daterangepicker:before, .daterangepicker:after {
+  position: fixed;
+  overflow: auto;
+  max-height: calc(100vh - 62px); }
+  .daterangepicker:before, .daterangepicker:after, .daterangepicker .drp-selected {
     display: none; }
 
 .row-1 {
@@ -407,9 +411,10 @@ img {
     transition: 0.3s;
     width: 6px;
     height: 6px;
-    margin: 4px 2px 0; }
+    margin: 4px 2px 2px; }
   .owl-carousel.owl-theme .owl-dots .owl-dot.active span, .owl-carousel.owl-theme .owl-dots .owl-dot:hover span {
-    background: #FFF; }
+    background: #FFF;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.5); }
 
 .owl-2.owl-theme .owl-dots {
   display: inline-block;
