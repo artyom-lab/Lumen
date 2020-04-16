@@ -1,22 +1,17 @@
 $(document).ready(function() {
 
-// $(".owl-1").owlCarousel({
-//   items: 1,
-//   smartSpeed: 1200,
-// });
-
-// var owl1 = $(".owl-1");
-$(".owl-1").owlCarousel({
+var owl1 = $(".owl-1");
+owl1.owlCarousel({
   items: 1,
   smartSpeed: 1200,
   touchDrag: false,
   mouseDrag: false,
-  // loop: true
+  loop: true,
 });
 
-// $('.click-slide').click(function() {
-//   owl3.trigger('next.owl.carousel');
-// });
+$('body').on('click', '.click-slide', function() {
+  $(this).find(owl1).trigger('next.owl.carousel');
+});
 
 $("#sandwich-1").on("click", function(){
 	$(this).toggleClass("active");
