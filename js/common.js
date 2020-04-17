@@ -4,6 +4,12 @@ $(document).on('click.bs.dropdown.data-api', '.dropdown-menu', function (e) {
     e.stopPropagation();
   });
 
+$(".owl-4").owlCarousel({
+  items: 1,
+  smartSpeed: 1200,
+  mouseDrag: false,
+});
+
 var owl1 = $(".owl-1");
 owl1.owlCarousel({
   items: 1,
@@ -15,6 +21,7 @@ owl1.owlCarousel({
 
 $('body').on('click', '.click-slide', function() {
   $(this).find(owl1).trigger('next.owl.carousel');
+  $(this).siblings(owl1).trigger('next.owl.carousel');
 });
 
 $('#sidebar-switcher').on('change', function() {
