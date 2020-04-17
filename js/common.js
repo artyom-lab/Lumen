@@ -1,5 +1,9 @@
 $(document).ready(function() {
 
+$(document).on('click.bs.dropdown.data-api', '.dropdown-menu', function (e) { 
+    e.stopPropagation();
+  });
+
 var owl1 = $(".owl-1");
 owl1.owlCarousel({
   items: 1,
@@ -11,6 +15,13 @@ owl1.owlCarousel({
 
 $('body').on('click', '.click-slide', function() {
   $(this).find(owl1).trigger('next.owl.carousel');
+});
+
+$('#sidebar-switcher').on('change', function() {
+  if ($(this).is(':checked')) 
+    $('.sidebar-2').addClass('sidebar-absolute');
+  else 
+    $('.sidebar-2').removeClass('sidebar-absolute');
 });
 
 $("#sandwich-1").on("click", function(){
@@ -57,7 +68,7 @@ const ShadowLineElement = Chart.elements.Line.extend({
       originalStroke.apply(this, arguments)
       ctx.restore()
     }
-    Chart.elements.Line.prototype.draw.apply(this, arguments)
+    Chart.elements.Line.prototype.draw.apply(this, arguments);
     ctx.stroke = originalStroke;
   }
 })
@@ -95,9 +106,10 @@ var data  = {
       pointBorderWidth: 3,
       pointBorderColor: 'transparent',
       pointBackgroundColor: 'transparent',
-      pointHoverRadius: 5,
-      pointHoverBorderWidth: 3,
-      pointHoverBorderColor: '#fff',
+      pointHoverRadius: 6,
+      pointHoverBorderWidth: 4,
+      pointHoverBorderColor: 'rgba(242, 242, 242, 1)',
+      hitRadius: 15,
       pointHoverBackgroundColor: 'transparent',
       borderColor: gradient2,
       data: [7, 7.5, 4.8, 6, 7.7, 6, 6.2, 5.7, 7.4, 7.7, 10, 12.678, 8.5, 7.5, 9, 8.8, 10.2, 0.7, 0.6, 2.5, 7.5, 8, 7.2, 13, 10.5, 11.3, 12.2, 12.2, 14, 13, 13],
@@ -157,7 +169,7 @@ var options = {
     xPadding: 10,
     caretSize: 0,
     caretPadding: 20,
-    backgroundColor: '#f8f9f8',
+    backgroundColor: 'rgba(248, 248, 248, 0.6)',
     titleFontColor: '#222222',
     bodyFontColor: '#222222',
     titleFontStyle: 'normal',
