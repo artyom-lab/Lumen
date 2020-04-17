@@ -443,7 +443,7 @@ img {
     transition: 0.3s;
     width: 6px;
     height: 6px;
-    margin: 6px 2px 2px; }
+    margin: 2px; }
   .owl-carousel.owl-theme .owl-dots .owl-dot.active span, .owl-carousel.owl-theme .owl-dots .owl-dot:hover span {
     background: #FFF;
     box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.5); }
