@@ -107,7 +107,6 @@ img
 				background: linear-gradient(to bottom, #378dff 0%, #1c65df 100%)
 	.sidebar-bottom
 		flex-grow: 1
-		overflow: auto
 		padding-bottom: 70px
 		&::-webkit-scrollbar
 			display: none
@@ -362,6 +361,8 @@ img
 	font-size: 14px
 .fz-13
 	font-size: 13px
+.fz-12
+	font-size: 12px
 .fz-11
 	font-size: 11px
 .fz-11a
@@ -691,3 +692,72 @@ img
 		pointer-events: none
 		.owl-dots .owl-dot span
 			pointer-events: initial
+
+.dropdown-2
+	.dropdown-toggle
+		&:after 
+			display: none
+	.dropdown-menu
+		width: 400px
+		border-radius: 20px
+		overflow: hidden
+		@media (max-width: 767.98px)
+			width: calc(100vw - 10px - .25rem) !important
+			top: 107% !important
+			left: -215px !important
+			border-radius: 8px !important
+		.dropdown-2-head
+			padding: 16px
+			border-bottom: 1px solid #dedede
+		.form-control 
+			background: #f7f7fc
+			height: 32px
+			padding: 5px 35px 5px 15px
+			border-color: #eee
+			border-radius: 30px
+			font-size: 0.75rem
+			width: 100%
+			&:focus 
+				box-shadow: none
+		.form-search
+			position: relative
+			button
+				transition: 0.3s
+				position: absolute
+				background: none
+				border: none
+				top: 50%
+				transform: translateY(-50%)
+				right: 14px
+				padding: 0
+				&:hover 
+					opacity: .6
+		.nav-tabs, .tab-content
+			border-bottom: 0	
+			height: 442px
+			overflow: auto
+			@media (max-width: 767.98px)
+				height: 270px
+			&::-webkit-scrollbar
+				display: none
+			.nav-item 
+				margin-bottom: 0
+			a
+				display: block
+				color: #222222
+				padding: 16px
+				width: 100%
+				border: 1px solid transparent
+				border-radius: 0
+				&:hover, &:focus
+					background: #f1f1f6
+					opacity: 1
+		.nav-tabs
+			.active 
+				background: #f1f1f6
+
+.br 
+	border-right: 1px solid #dedede
+
+.bb 
+	border-bottom: 1px solid #dedede
