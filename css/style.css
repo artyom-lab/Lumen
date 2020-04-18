@@ -81,80 +81,84 @@ img {
     .sidebar-1 {
       left: auto;
       right: 100%; } }
-  .sidebar-1 .sidebar-top {
-    padding: 10px 15px; }
-    .sidebar-1 .sidebar-top .logo {
-      font-size: 28px;
-      color: #fff;
-      vertical-align: middle; }
-    .sidebar-1 .sidebar-top .logo-img {
+
+.sidebar-top {
+  padding: 10px 15px; }
+  .sidebar-top .logo {
+    font-size: 28px;
+    color: #fff;
+    vertical-align: middle; }
+  .sidebar-top .logo-img {
+    width: 10px;
+    display: inline-block;
+    height: 10px;
+    border-radius: 100px;
+    background: linear-gradient(to bottom, #ffae34 0%, #e08025 100%);
+    vertical-align: middle;
+    margin-right: 4px; }
+    .sidebar-top .logo-img:before, .sidebar-top .logo-img:after {
+      content: "";
+      position: absolute;
+      top: 4px;
       width: 10px;
-      display: inline-block;
       height: 10px;
       border-radius: 100px;
-      background: linear-gradient(to bottom, #ffae34 0%, #e08025 100%);
-      vertical-align: middle;
-      margin-right: 4px; }
-      .sidebar-1 .sidebar-top .logo-img:before, .sidebar-1 .sidebar-top .logo-img:after {
+      background: linear-gradient(to bottom, #fd5170 0%, #fa1d42 100%); }
+    .sidebar-top .logo-img:after {
+      top: 28px;
+      background: linear-gradient(to bottom, #378dff 0%, #1c65df 100%); }
+
+.sidebar-bottom {
+  flex-grow: 1;
+  padding-bottom: 70px;
+  overflow: auto; }
+  .sidebar-bottom::-webkit-scrollbar {
+    display: none; }
+  .sidebar-bottom .accordion-wrap {
+    padding: 15px 0 15px 10px; }
+    .sidebar-bottom .accordion-wrap .dashboard {
+      display: block;
+      color: #FFF;
+      padding: 2px 30px 2px 6px;
+      position: relative;
+      border-radius: 100px 0 0 100px;
+      overflow: hidden; }
+      .sidebar-bottom .accordion-wrap .dashboard:before {
         content: "";
         position: absolute;
-        top: 4px;
-        width: 10px;
-        height: 10px;
-        border-radius: 100px;
-        background: linear-gradient(to bottom, #fd5170 0%, #fa1d42 100%); }
-      .sidebar-1 .sidebar-top .logo-img:after {
-        top: 28px;
-        background: linear-gradient(to bottom, #378dff 0%, #1c65df 100%); }
-  .sidebar-1 .sidebar-bottom {
-    flex-grow: 1;
-    padding-bottom: 70px; }
-    .sidebar-1 .sidebar-bottom::-webkit-scrollbar {
-      display: none; }
-    .sidebar-1 .sidebar-bottom .network {
-      padding: 15px;
-      display: block;
-      background-color: #242B30;
-      color: #fff;
-      position: relative; }
-      .sidebar-1 .sidebar-bottom .network .fa-chevron-right {
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        right: 15px; }
-    .sidebar-1 .sidebar-bottom .accordion-wrap {
-      padding: 15px 0 15px 10px; }
-      .sidebar-1 .sidebar-bottom .accordion-wrap .dashboard {
-        display: block;
-        color: #FFF;
-        padding: 2px 30px 2px 6px;
-        position: relative;
-        border-radius: 100px 0 0 100px;
-        overflow: hidden; }
-        .sidebar-1 .sidebar-bottom .accordion-wrap .dashboard:before {
-          content: "";
-          position: absolute;
-          transition: 0.3s;
-          top: 0;
-          bottom: 0;
-          left: 0;
-          right: 0;
-          background: linear-gradient(to right, #51606e 0%, #323b42 100%);
-          opacity: 0; }
-        .sidebar-1 .sidebar-bottom .accordion-wrap .dashboard:hover, .sidebar-1 .sidebar-bottom .accordion-wrap .dashboard.active {
+        transition: 0.3s;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: linear-gradient(to right, #51606e 0%, #323b42 100%);
+        opacity: 0; }
+      .sidebar-bottom .accordion-wrap .dashboard:hover, .sidebar-bottom .accordion-wrap .dashboard.active {
+        opacity: 1; }
+        .sidebar-bottom .accordion-wrap .dashboard:hover:before, .sidebar-bottom .accordion-wrap .dashboard.active:before {
           opacity: 1; }
-          .sidebar-1 .sidebar-bottom .accordion-wrap .dashboard:hover:before, .sidebar-1 .sidebar-bottom .accordion-wrap .dashboard.active:before {
-            opacity: 1; }
-      .sidebar-1 .sidebar-bottom .accordion-wrap .select-user {
-        padding: 8px 15px 8px 6px; }
-        .sidebar-1 .sidebar-bottom .accordion-wrap .select-user .form-control {
-          border-radius: 100px;
-          font-size: 12px;
-          padding-bottom: 0;
-          padding-top: 0;
-          height: 27px; }
-          .sidebar-1 .sidebar-bottom .accordion-wrap .select-user .form-control:focus {
-            box-shadow: none; }
+    .sidebar-bottom .accordion-wrap .select-user {
+      padding: 8px 15px 8px 6px; }
+      .sidebar-bottom .accordion-wrap .select-user .form-control {
+        border-radius: 100px;
+        font-size: 12px;
+        padding-bottom: 0;
+        padding-top: 0;
+        height: 27px; }
+        .sidebar-bottom .accordion-wrap .select-user .form-control:focus {
+          box-shadow: none; }
+
+.network {
+  padding: 15px;
+  display: block;
+  background-color: #242B30;
+  color: #fff !important;
+  position: relative; }
+  .network .fa-chevron-right {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 15px; }
 
 .accordion-1 .card-body {
   padding: 2px 0 0 35px; }
@@ -418,7 +422,7 @@ img {
   right: 20px !important;
   position: fixed;
   overflow: auto;
-  max-height: calc(100vh - 62px); }
+  max-height: calc(100vh - 124px); }
   .daterangepicker:before, .daterangepicker:after, .daterangepicker .drp-selected {
     display: none; }
 
@@ -716,10 +720,10 @@ img {
   overflow: hidden; }
   @media (max-width: 767.98px) {
     .dropdown-2 .dropdown-menu {
-      width: calc(100vw - 10px - .25rem) !important;
-      top: 107% !important;
-      left: -215px !important;
-      border-radius: 8px !important; } }
+      width: calc(100vw - .25rem);
+      top: calc(100% + .125rem) !important;
+      border-radius: 8px !important;
+      transform: none !important; } }
   .dropdown-2 .dropdown-menu .dropdown-2-head {
     padding: 16px;
     border-bottom: 1px solid #dedede; }

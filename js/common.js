@@ -43,7 +43,7 @@ $("#sandwich-2").on("click", function(){
 });
 
 Waves.attach('.wave', ['waves-light']);
-Waves.attach('.wave2', ['waves-dark']);
+Waves.attach('.wave2, .dropdown-2 .dropdown-menu a', ['waves-dark']);
 Waves.init();
 
 var start = moment("05/12/2019"),
