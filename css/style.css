@@ -737,7 +737,8 @@ img {
     border-color: #eee;
     border-radius: 30px;
     font-size: 0.75rem;
-    width: 100%; }
+    width: 100%;
+    box-shadow: none; }
     .dropdown-2 .dropdown-menu .form-control:focus {
       box-shadow: none; }
   .dropdown-2 .dropdown-menu .form-search {
@@ -762,7 +763,7 @@ img {
         height: 270px; } }
     @media (max-width: 339.98px) {
       .dropdown-2 .dropdown-menu .nav-tabs, .dropdown-2 .dropdown-menu .tab-content {
-        height: 240px; } }
+        height: 200px; } }
     .dropdown-2 .dropdown-menu .nav-tabs::-webkit-scrollbar, .dropdown-2 .dropdown-menu .tab-content::-webkit-scrollbar {
       display: none; }
     .dropdown-2 .dropdown-menu .nav-tabs .nav-item, .dropdown-2 .dropdown-menu .tab-content .nav-item {
