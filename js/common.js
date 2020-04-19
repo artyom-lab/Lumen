@@ -103,8 +103,9 @@ Chart.defaults.global.defaultFontFamily = '"Roboto", sans-serif';
 Chart.defaults.global.defaultFontSize = 10;
 Chart.defaults.global.defaultFontStyle = 'bold';
 
+var labels = ["May 12", "May 13", "May 14", "May 15", "May 16", "May 17", "May 18", "May 19", "May 20", "May 21", "May 22", "May 23", "May 24", "May 25", "May 26", "May 27", "May 28", "May 29", "May 30", "May 31", "Jun 1", "Jun 2", "Jun 3", "Jun 4", "Jun 5", "Jun 6", "Jun 7", "Jun 8", "Jun 9", "Jun 10", "Jun 11"];
 var data  = {
-    labels: ["May 12", "May 13", "May 14", "May 15", "May 16", "May 17", "May 18", "May 19", "May 20", "May 21", "May 22", "May 23", "May 24", "May 25", "May 26", "May 27", "May 28", "May 29", "May 30", "May 31", "Jun 1", "Jun 2", "Jun 3", "Jun 4", "Jun 5", "Jun 6", "Jun 7", "Jun 8", "Jun 9", "Jun 10", "Jun 11"],
+    labels: labels,
     datasets: [{
       label: '',
       backgroundColor: gradient,
@@ -130,9 +131,18 @@ var options = {
     xAxes: [{
       ticks: {
         padding: 10,
-        // userCallback: function(tick) {
-        //   return tick.toString() + 'k';
-        // },
+        userCallback: function(tick) {
+          switch(tick) {
+            case labels[0]:
+              return tick;
+            case labels[labels.length - 1]:
+              return tick;
+            case labels[labels.length - Math.round(labels.length/2)]:
+              return tick;
+            default:
+              return;
+          };
+        },
       },
       gridLines: {
         display: false,

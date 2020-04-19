@@ -402,6 +402,8 @@ img
 	position: fixed
 	overflow: auto
 	max-height: calc(100vh - 124px)
+	@media (max-width: 339.98px)
+		max-height: calc(100vh - 144px)
 	&:before, &:after, .drp-selected
 		display: none
 
@@ -742,6 +744,8 @@ img
 			overflow: auto
 			@media (max-width: 767.98px)
 				height: 270px
+			@media (max-width: 339.98px)
+				height: 240px
 			&::-webkit-scrollbar
 				display: none
 			.nav-item 
@@ -751,7 +755,7 @@ img
 				color: #222222
 				padding: 16px
 				width: 100%
-				border: 1px solid transparent
+				border: 0
 				border-radius: 0
 				&:hover, &:focus
 					background: #f1f1f6

@@ -423,6 +423,9 @@ img {
   position: fixed;
   overflow: auto;
   max-height: calc(100vh - 124px); }
+  @media (max-width: 339.98px) {
+    .daterangepicker {
+      max-height: calc(100vh - 144px); } }
   .daterangepicker:before, .daterangepicker:after, .daterangepicker .drp-selected {
     display: none; }
 
@@ -757,6 +760,9 @@ img {
     @media (max-width: 767.98px) {
       .dropdown-2 .dropdown-menu .nav-tabs, .dropdown-2 .dropdown-menu .tab-content {
         height: 270px; } }
+    @media (max-width: 339.98px) {
+      .dropdown-2 .dropdown-menu .nav-tabs, .dropdown-2 .dropdown-menu .tab-content {
+        height: 240px; } }
     .dropdown-2 .dropdown-menu .nav-tabs::-webkit-scrollbar, .dropdown-2 .dropdown-menu .tab-content::-webkit-scrollbar {
       display: none; }
     .dropdown-2 .dropdown-menu .nav-tabs .nav-item, .dropdown-2 .dropdown-menu .tab-content .nav-item {
@@ -766,7 +772,7 @@ img {
       color: #222222;
       padding: 16px;
       width: 100%;
-      border: 1px solid transparent;
+      border: 0;
       border-radius: 0; }
       .dropdown-2 .dropdown-menu .nav-tabs a:hover, .dropdown-2 .dropdown-menu .nav-tabs a:focus, .dropdown-2 .dropdown-menu .tab-content a:hover, .dropdown-2 .dropdown-menu .tab-content a:focus {
         background: #f1f1f6;
