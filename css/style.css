@@ -463,7 +463,7 @@ img {
   right: 14px;
   top: -44px; }
   .owl-2.owl-theme .owl-dots .owl-dot span {
-    margin: 12px 2px 0; }
+    margin: 12px 2px 2px; }
 .owl-2.owl-theme img {
   width: 11px;
   display: inline-block; }
@@ -474,7 +474,7 @@ img {
   left: 14px;
   top: -30px; }
   .owl-3.owl-theme .owl-dots .owl-dot span {
-    margin: 12px 2px 0; }
+    margin: 12px 2px 2px; }
 
 .fas-2 {
   font-size: 8px;
@@ -763,7 +763,7 @@ img {
         height: 270px; } }
     @media (max-width: 339.98px) {
       .dropdown-2 .dropdown-menu .nav-tabs, .dropdown-2 .dropdown-menu .tab-content {
-        height: 200px; } }
+        height: 155px; } }
     .dropdown-2 .dropdown-menu .nav-tabs::-webkit-scrollbar, .dropdown-2 .dropdown-menu .tab-content::-webkit-scrollbar {
       display: none; }
     .dropdown-2 .dropdown-menu .nav-tabs .nav-item, .dropdown-2 .dropdown-menu .tab-content .nav-item {
