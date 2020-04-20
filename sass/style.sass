@@ -49,6 +49,9 @@ img
 	max-width: 100%
 	height: auto
 
+.dropdown-menu, .daterangepicker 
+	box-shadow: 0 1px 15px rgba(0, 0, 0, .1)
+
 .row:not(.no-gutters)
 	margin-left: -10px
 	margin-right: -10px
@@ -397,7 +400,7 @@ img
 			opacity: .6
 
 .daterangepicker
-	top: 54px !important
+	top: 55px !important
 	right: 20px !important
 	position: fixed
 	overflow: auto
@@ -518,6 +521,7 @@ img
 	border-radius: 100px
 	color: #FFF
 	padding: 2px 8px
+	font-weight: bold
 
 .tooltip-inner
 	font-size: 10px
@@ -705,7 +709,6 @@ img
 			display: none
 	.dropdown-menu
 		width: 400px
-		border-radius: 20px
 		overflow: hidden
 		@media (max-width: 767.98px)
 			width: calc(100vw - .25rem)
@@ -720,7 +723,7 @@ img
 			height: 32px
 			padding: 5px 35px 5px 15px
 			border-color: #eee
-			border-radius: 30px
+			border-radius: .25rem
 			font-size: 0.75rem
 			width: 100%
 			box-shadow: none !important

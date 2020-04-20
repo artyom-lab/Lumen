@@ -61,6 +61,7 @@ $('#reportrange').daterangepicker({
 cb(start, end);
 
 $('[data-toggle="tooltip"]').tooltip();
+$('[data-toggle="popover"]').popover()
 
 const ShadowLineElement = Chart.elements.Line.extend({
   draw () {   
