@@ -8,12 +8,15 @@ $box: 0 1px 1px rgba(0, 0, 0, .1)
 body
 	font-family: 'Roboto', sans-serif
 	font-size: 12px
-	color: #222222
-	background-color: #EFEFF4
 	min-height: 100vh
 	transition: $transition
 	padding-top: 62px
 	position: relative
+	color: #222222
+	background-color: #EFEFF4
+	&.dark-mode 
+		color: #FFF
+		background-color: #1a1d21
 	@media (min-width: 992px)
 		padding-left: 220px
 	@media (min-width: 1200px)
@@ -77,17 +80,21 @@ img
 	left: 0
 	max-height: 100vh
 	color: #fff
-	background-color: #323b42
 	display: flex
 	flex-direction: column
 	box-shadow: $box
 	z-index: 1040
+	background-color: #323b42
+	.dark-mode &
+		background: #252b35
 	@media (max-width: 991.98px)	
 		left: auto
 		right: 100%
 
 .sidebar-top
 	padding: 10px 15px
+	.dark-mode &
+		background: #1c222a
 	.logo 
 		font-size: 28px
 		color: #fff
@@ -149,6 +156,10 @@ img
 				padding-bottom: 0
 				padding-top: 0
 				height: 27px
+				.dark-mode &
+					background: #313946
+					border-color: #313946
+					color: #FFF
 				&:focus
 					box-shadow: none
 
@@ -158,6 +169,8 @@ img
 	background-color: #242B30
 	color: #fff !important
 	position: relative
+	.dark-mode &
+		background: #15191e
 	.fa-chevron-right
 		position: absolute
 		top: 50%
@@ -185,7 +198,6 @@ img
 .sidebar-2
 	width: 300px
 	box-shadow: $box
-	background-color: #fff
 	display: flex
 	flex-direction: column
 	bottom: 0
@@ -196,6 +208,9 @@ img
 	max-height: calc(100vh - 62px)
 	&::-webkit-scrollbar
 		display: none
+	background-color: #fff
+	.dark-mode &
+		background-color: #252b35
 	@media (min-width: 1200px)	
 		&.sidebar-absolute 
 			position: absolute
@@ -218,6 +233,9 @@ img
 .navbar
 	padding: 1rem 20px
 	box-shadow: $box
+	.dark-mode &
+		color: #FFF !important
+		background: #1c222a !important
 	@media (max-width: 575.98px)	
 		padding-left: 15px
 		padding-right: 15px
@@ -237,13 +255,19 @@ img
 	.dropdown-menu
 		top: 160%
 		border: 0
+		.dark-mode &
+			background: #1c222a
 		.dropdown-item
 			padding: 5px 15px
 			font-size: 12px
 			color: #222222
-			&:hover, &:active
+			.dark-mode &
+				color: #FFF
+			&:hover, &:active, &:focus
 				opacity: 1
 				background: #f8f9fa
+				.dark-mode &
+					background: #313946
 			.badge
 				border-radius: 12px
 				width: 19px
@@ -253,6 +277,11 @@ img
 			transition: $transition
 			&:hover 
 				background: #f8f9fa
+				.dark-mode &
+					background: #313946
+		.dropdown-divider 
+			.dark-mode &
+				border-top: 1px solid #313943
 
 .sandwich
 	color: inherit
@@ -286,9 +315,13 @@ img
 	&.active
 		color: initial
 		transform: translateX(55px)
+		.dark-mode &
+			color: #FFF
 	@media (max-width: 991.98px)
 		color: initial
 		transform: translateX(55px)
+		.dark-mode &
+			color: #FFF
 	@media (max-width: 575.98px)
 		transform: translateX(50px) !important
 #sandwich-2
@@ -299,6 +332,8 @@ img
 	padding: 15px
 	+ .block 
 		border-top: 1px solid #F1F1F1
+		.dark-mode &
+			border-top: 1px solid #313943
 	.block 
 		padding-left: 0
 		padding-right: 0
@@ -314,6 +349,8 @@ img
 		min-height: 120px
 .scroll-wrap-1
 	border-top: 1px solid #F1F1F1
+	.dark-mode &
+		border-top: 1px solid #313943
 .scroll-wrap-2
 	min-height: 232px
 .scroll
@@ -330,6 +367,8 @@ img
 	&::-webkit-scrollbar-thumb
 		background-color: #F1F1F6
 		border-radius: 2px
+		.dark-mode & 
+			background-color: #313943
 .block-wrap
 	margin-top: -15px
 	margin-bottom: -15px
@@ -338,10 +377,12 @@ img
 	display: flex
 	flex-direction: column
 	border-radius: 8px
-	background-color: #fff
 	box-shadow: $box
 	margin-bottom: 20px
 	height: calc(100% - 20px)
+	background-color: #fff
+	.dark-mode &
+		background-color: #252b35
 	@media (max-width: 575.98px)
 		margin-bottom: 15px
 		height: calc(100% - 15px)
@@ -358,10 +399,25 @@ img
 	padding: 15px
 .cart-content-2
 	background: linear-gradient(to bottom, #c434fe 0%, #a502ea 100%)
+	.dark-mode &
+		background: #252b35
+	.carousel-name-2
+		.dark-mode &
+			color: #b015f1
 .cart-content-3
 	background: linear-gradient(to right, #fda52d 0%, #e88903 100%)
+	.dark-mode &
+		background: #252b35
+	.carousel-name-3
+		.dark-mode &
+			color: #f8a027
 .cart-content-4
 	background: linear-gradient(to left, #6ac4fd 0%, #0d96e2 100%)
+	.dark-mode &
+		background: #252b35
+	.carousel-name-4
+		.dark-mode &
+			color: #189ce5
 
 .fz-30
 	font-size: 30px
@@ -391,6 +447,8 @@ img
 
 #reportrange
 	color: #222222	
+	.dark-mode & 
+		color: #FFF
 	+ .fa-chevron-right
 		position: absolute
 		top: 6px
@@ -409,6 +467,8 @@ img
 	overflow: auto
 	border: 0
 	max-height: calc(100vh - 124px)
+	.dark-mode & 
+		color: initial
 	@media (max-width: 339.98px)
 		max-height: calc(100vh - 144px)
 	&:before, &:after, .drp-selected
@@ -440,6 +500,8 @@ img
 					width: 6px
 					height: 6px
 					margin: 2px
+					.dark-mode &
+						background: rgba(49, 57, 67, .8)
 				&.active, &:hover
 					span
 						background: #FFF
@@ -479,10 +541,17 @@ img
 	text-align: center
 	line-height: 12px
 	background: #b9b9b9
+	.dark-mode &
+		color: #000
+		background: #FFF
 	&:hover 
 		color: #FFF
+		.dark-mode &
+			color: #000
 .fas-3
 	background: #0081ff
+	.dark-mode &
+		background: #0081ff
 
 .br-100
 	border-radius: 100px
@@ -553,6 +622,8 @@ img
 						display: none
 					
 .table-1
+	.dark-mode &
+		color: #FFF
 	th, td
 		padding-left: 0
 		padding-right: 0
@@ -661,6 +732,8 @@ img
 		max-width: 100%
 		font-size: 12px 
 		color: #222222 
+		.dark-mode &
+			color: #FFF
 	.lever
 		flex: 0 0 auto
 		position: relative
@@ -716,6 +789,9 @@ img
 		overflow: hidden
 		margin-top: 5px
 		border: 0
+		.dark-mode &
+			background: #1c222a
+			color: #FFF
 		@media (max-width: 767.98px)
 			width: calc(100vw - .25rem)
 			top: calc(100% + .125rem) !important
@@ -726,6 +802,8 @@ img
 		.dropdown-2-head
 			padding: 16px
 			border-bottom: 1px solid #dedede
+			.dark-mode &
+				border-bottom: 1px solid #313943
 		.form-control 
 			background: #f7f7fc
 			height: 32px
@@ -735,6 +813,10 @@ img
 			font-size: 0.75rem
 			width: 100%
 			box-shadow: none !important
+			.dark-mode &
+				background: #313946
+				border-color: #313946
+				color: #FFF
 			&:focus 
 				box-shadow: none
 		.form-search
@@ -769,15 +851,24 @@ img
 				width: 100%
 				border: 0
 				border-radius: 0
+				.dark-mode &
+					color: #FFF
 				&:hover, &:focus
 					background: #f1f1f6
 					opacity: 1
+					.dark-mode &
+						background: #313946
 		.nav-tabs
 			.active 
 				background: #f1f1f6
-
+				.dark-mode &
+					background: #313946
+					
 .br 
 	border-right: 1px solid #dedede
-
+	.dark-mode &
+		border-right: 1px solid #313943
 .bb 
 	border-bottom: 1px solid #dedede
+	.dark-mode &
+		border-bottom: 1px solid #313943

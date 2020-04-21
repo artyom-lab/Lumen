@@ -13,7 +13,7 @@
 		<link rel="stylesheet" href="css/style.css">
 	</head>
 	
-	<body>
+	<body class="dark-mode">
 
 		<aside class="sidebar-1">
 			<div class="sidebar-top">
@@ -43,6 +43,7 @@
 			  <div class="dropdown-menu fz-12 py-0" aria-labelledby="dropdownMenuButton">
 			  	<div class="dropdown-2-head">
 				  	<form class="form-inline form-search">
+
 					  	<input type="text" class="form-control" placeholder="Enter keyword">
 					  	<button class="fas fa-search"></button>
 				  	</form>
@@ -733,9 +734,14 @@
           <a href="#!" class="dropdown-item d-flex align-items-center"><span>Inbox</span><span class="badge badge-danger ml-auto">2</span></a>
           <a href="#!" class="dropdown-item">Calendar</a>
           <a href="#!" class="dropdown-item">Setting</a>
-					<label class="switch-wrap d-none d-xl-flex">
+					<label class="switch-wrap d-none d-xl-flex mb-0">
 						<span>Pitches Fixed</span>
 						<input type="checkbox" id="sidebar-switcher">
+						<span class="lever"></span>
+					</label>
+					<label class="switch-wrap">
+						<span>Dark Mode</span>
+						<input type="checkbox" id="dark-mode">
 						<span class="lever"></span>
 					</label>
           <div class="dropdown-divider"></div>
@@ -752,7 +758,7 @@
 				<div class="col-md-auto">
 					<div class="row">
 						<div class="col-sm-6 col-md-auto w-190">
-							<div class="cart cart-content text-center h-auto lh-12 wave2">
+							<div class="cart cart-content text-center h-auto lh-12 wave">
 								<div class="click-slide abs"></div>
 								<div class="fz-13 text-uppercase red font-weight-bold">Audience</div>
 								<div class="owl-1 owl-carousel owl-theme">
@@ -774,7 +780,7 @@
 						<div class="col-sm-6 col-md-auto w-190">
 							<div class="cart cart-content cart-content-2 text-white text-center h-auto lh-12 wave">
 								<div class="click-slide abs"></div>
-								<div class="fz-13 text-uppercase font-weight-bold">Newsletter</div>
+								<div class="fz-13 text-uppercase font-weight-bold carousel-name-2">Newsletter</div>
 								<div class="owl-1 owl-carousel owl-theme">
 									<div class="pb-1">
 										<div class="fz-30 font-weight-bold">1,082</div>
@@ -796,7 +802,7 @@
 						<div class="col-sm-6 col-md-auto w-190">
 							<div class="cart cart-content cart-content-3 text-center h-auto lh-12 text-white wave">
 								<div class="click-slide abs"></div>
-								<div class="fz-13 text-uppercase font-weight-bold">Alerts</div>
+								<div class="fz-13 text-uppercase font-weight-bold carousel-name-3">Alerts</div>
 								<div class="owl-1 owl-carousel owl-theme">
 									<div class="pb-1">
 										<div class="fz-30 font-weight-bold">80</div>
@@ -816,7 +822,7 @@
 						<div class="col-sm-6 col-md-auto w-190">
 							<div class="cart cart-content cart-content-4 text-center h-auto lh-12 text-white wave">
 								<div class="click-slide abs"></div>
-								<div class="fz-13 text-uppercase font-weight-bold">Social</div>
+								<div class="fz-13 text-uppercase font-weight-bold carousel-name-4">Social</div>
 								<div class="owl-1 owl-carousel owl-theme">
 									<div class="pb-1">
 										<div class="fz-30 font-weight-bold">25</div>
@@ -1467,7 +1473,7 @@
 				</div>
 			</div>
 
-			<div class="block scroll-wrap-1">
+			<div class="block scroll-wrap-1 pb-4">
 				<div class="block-wrap">
 					<div class="block pt-3 pb-3 pb-xl-2">
 						<span class="fz-10 pills colorpoint-6">Pending</span>
