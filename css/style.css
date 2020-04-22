@@ -486,12 +486,28 @@ img {
   border: 0;
   max-height: calc(100vh - 124px); }
   .dark-mode .daterangepicker {
-    color: initial; }
+    background: #1c222a; }
   @media (max-width: 339.98px) {
     .daterangepicker {
       max-height: calc(100vh - 144px); } }
   .daterangepicker:before, .daterangepicker:after, .daterangepicker .drp-selected {
     display: none; }
+  .dark-mode .daterangepicker .drp-buttons {
+    border-top: 1px solid #313943; }
+  .dark-mode .daterangepicker .drp-buttons .btn {
+    color: #FFF;
+    transition: 0.3s; }
+    .dark-mode .daterangepicker .drp-buttons .btn:hover {
+      opacity: 0.6; }
+  .dark-mode .daterangepicker .calendar-table {
+    background: #1c222a;
+    border-color: #1c222a; }
+  .dark-mode .daterangepicker .available:hover {
+    background: #313946; }
+  .dark-mode .daterangepicker .available span {
+    border-color: #FFF; }
+  .dark-mode .daterangepicker tbody .off {
+    background: #1c222a; }
 
 .row-1 {
   line-height: 2;
@@ -887,5 +903,12 @@ img {
   border-bottom: 1px solid #dedede; }
   .dark-mode .bb {
     border-bottom: 1px solid #313943; }
+
+.dark-mode .popover-body {
+  color: #FFF;
+  background: #1c222a; }
+
+.dark-mode .bs-popover-bottom .arrow:after {
+  border-bottom-color: #1c222a; }
 
 /*# sourceMappingURL=style.css.map */

@@ -31,13 +31,13 @@ $('#sidebar-switcher').on('change', function() {
     $('.sidebar-2').removeClass('sidebar-absolute');
 });
 
-$("#sandwich-1").on("click", function(){
+$("#sandwich-1").on("click", function() {
 	$(this).toggleClass("active");
 	$("body").toggleClass("menubar-1");
   window.dispatchEvent(new Event('resize'));
 });
 
-$("#sandwich-2").on("click", function(){
+$("#sandwich-2").on("click", function() {
 	$(this).toggleClass("active");
 	$("body").toggleClass("menubar-2");
 });
@@ -60,8 +60,52 @@ $('#reportrange').daterangepicker({
 
 cb(start, end);
 
-$('[data-toggle="tooltip"]').tooltip();
 $('[data-toggle="popover"]').popover()
+
+var chartVars = {
+  gradientStart: 'rgba(233, 233, 237, 1)',
+  gradientStop: 'rgba(233, 233, 237, 0)',
+  fontColor: '#222222',
+  gridLine: '#dedede',
+  tooltipBg: 'rgba(248, 248, 248, 0.6)',
+  tooltipBorder: 'rgba(242, 242, 242, 0.5)',
+};
+
+function lightModeChart() {
+  Chart.defaults.global.defaultFontColor = chartVars.fontColor;
+  chartInstance.data = data;
+  chartInstance.options = options;
+  chartInstance.update();
+};
+
+function darkModeChart() {
+  var gradientDark = chart.createLinearGradient(0, 0, 0, 320),
+      dataDark = $.extend(true, {}, data),
+      optionsDark = $.extend(true, {}, options);
+  Chart.defaults.global.defaultFontColor = '#fff';
+  gradientDark.addColorStop(0, 'rgba(0, 0, 0, 1)');
+  gradientDark.addColorStop(1, 'rgba(0, 0, 0, 0)');
+  dataDark.datasets[0].backgroundColor = gradientDark;
+  optionsDark.scales.yAxes[0].gridLines.color = '#313943';
+  optionsDark.tooltips.backgroundColor = 'rgba(0, 0, 0, .5)';
+  optionsDark.tooltips.titleFontColor = '#fff';
+  optionsDark.tooltips.bodyFontColor = '#fff';
+  optionsDark.tooltips.borderColor = 'rgba(0, 0, 0, .5)';
+  chartInstance.data = dataDark;
+  chartInstance.options = optionsDark;
+  chartInstance.update();
+};
+
+$('#dark-mode').on('change', function() {
+  if ($(this).is(':checked')) {
+    $('body').addClass('dark-mode');
+    darkModeChart();
+  }
+  else {
+    $('body').removeClass('dark-mode');
+    lightModeChart();
+  }
+});
 
 const ShadowLineElement = Chart.elements.Line.extend({
   draw () {   
@@ -90,8 +134,8 @@ var chart    = document.getElementById('canvas').getContext('2d'),
     gradient = chart.createLinearGradient(0, 0, 0, 320),
     gradient2 = chart.createLinearGradient(0, 0, 0, 320);
 
-gradient.addColorStop(0, 'rgba(233, 233, 237, 1)');
-gradient.addColorStop(1, 'rgba(233, 233, 237, 0)');
+gradient.addColorStop(0, chartVars.gradientStart);
+gradient.addColorStop(1, chartVars.gradientStop);
 
 gradient2.addColorStop(0, '#02d79c');
 gradient2.addColorStop(0.25, '#4afd3b');
@@ -99,7 +143,7 @@ gradient2.addColorStop(0.5, '#f8d217');
 gradient2.addColorStop(0.75, '#fca033');
 gradient2.addColorStop(1, '#fb5d46');
 
-Chart.defaults.global.defaultFontColor = '#222222';
+Chart.defaults.global.defaultFontColor = chartVars.fontColor;
 Chart.defaults.global.defaultFontFamily = '"Roboto", sans-serif';
 Chart.defaults.global.defaultFontSize = 10;
 Chart.defaults.global.defaultFontStyle = 'bold';
@@ -166,7 +210,7 @@ var options = {
         },
       },
       gridLines: {
-        color: '#dedede',
+        color: chartVars.gridLine,
         drawTicks: false,
         drawBorder: false,
       }
@@ -187,14 +231,14 @@ var options = {
     xPadding: 10,
     caretSize: 0,
     caretPadding: 20,
-    backgroundColor: 'rgba(248, 248, 248, 0.6)',
-    titleFontColor: '#222222',
-    bodyFontColor: '#222222',
     titleFontStyle: 'normal',
     bodyFontStyle: 'bold',
     borderWidth: 2,
     cornerRadius: 4,
-    borderColor: 'rgba(242, 242, 242, 0.5)'
+    backgroundColor: chartVars.tooltipBg,
+    titleFontColor: chartVars.fontColor,
+    bodyFontColor: chartVars.fontColor,
+    borderColor: chartVars.tooltipBorder
   },
 };
 
@@ -203,7 +247,6 @@ var chartInstance = new Chart(chart, {
   data: data,
   options: options
 });
-
 
 var chart2    = document.getElementById('canvas2').getContext('2d'),
     gradient4 = chart2.createLinearGradient(0, 0, 0, 100);
@@ -215,7 +258,7 @@ gradient4.addColorStop(0.75, '#fca033');
 gradient4.addColorStop(1, '#fb5d46');
 
 var data2  = {
-    labels: ["May 12", "May 13", "May 14", "May 15", "May 16", "May 17", "May 18", "May 19", "May 20", "May 21", "May 22", "May 23", "May 24", "May 25", "May 26", "May 27", "May 28", "May 29", "May 30", "May 31", "Jun 1", "Jun 2", "Jun 3", "Jun 4", "Jun 5", "Jun 6", "Jun 7", "Jun 8", "Jun 9", "Jun 10", "Jun 11"],
+    labels: ["", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", ""],
     datasets: [{
       label: '',
       fill: false,
@@ -226,8 +269,6 @@ var data2  = {
       pointBackgroundColor: 'transparent',
       pointHoverRadius: 0,
       pointHoverBorderWidth: 0,
-      pointHoverBorderColor: '#fff',
-      pointHoverBackgroundColor: '#76e288',
       borderColor: gradient4,
       data: [1.5, 1.6, 1.6, 1.5, 1.3, 1.4, 2.5, 8, 14, 11, 8, 1.5, 3, 6, 5.5, 6.5, 4, 1.5, 4, 11, 4, 1.5, 6, 11, 7, 8.5, 8, 10.5, 11, 14, 12],
     }]
@@ -239,13 +280,6 @@ var options2 = {
 
     xAxes: [{
       display: false,
-      ticks: {
-      },
-      gridLines: {
-        display: false,
-        drawTicks: false,
-        drawBorder: false,
-      }
     }],
 
     yAxes: [{
@@ -254,15 +288,15 @@ var options2 = {
         max: 15,
         min: 0,
         stepSize: 5,
-        userCallback: function(tick) {
-          return tick.toString() + 'k';
-        },
       },
     }]
 
   },
   legend: {
     display: false
+  },
+  tooltips: {
+    enabled: false
   },
 };
 

@@ -468,11 +468,34 @@ img
 	border: 0
 	max-height: calc(100vh - 124px)
 	.dark-mode & 
-		color: initial
+		background: #1c222a
 	@media (max-width: 339.98px)
 		max-height: calc(100vh - 144px)
 	&:before, &:after, .drp-selected
 		display: none
+	.drp-buttons 
+		.dark-mode & 
+			border-top: 1px solid #313943	
+		.btn
+			.dark-mode & 
+				color: #FFF
+				transition: $transition
+				&:hover 
+					opacity: .6
+	.calendar-table
+		.dark-mode & 
+			background: #1c222a
+			border-color: #1c222a
+	.available 
+		&:hover 
+			.dark-mode & 
+				background: #313946
+		span
+			.dark-mode & 
+				border-color: #FFF
+	tbody .off 
+		.dark-mode &
+			background: #1c222a
 
 .row-1
 	line-height: 2
@@ -872,3 +895,13 @@ img
 	border-bottom: 1px solid #dedede
 	.dark-mode &
 		border-bottom: 1px solid #313943
+
+.popover-body
+	.dark-mode &
+		color: #FFF
+		background: #1c222a
+.bs-popover-bottom
+	.arrow 
+		&:after 
+			.dark-mode &
+				border-bottom-color: #1c222a
