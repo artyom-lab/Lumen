@@ -132,7 +132,7 @@ img {
     .sidebar-bottom .accordion-wrap .dashboard {
       display: block;
       color: #FFF;
-      padding: 2px 30px 2px 6px;
+      padding: 5px 30px 5px 6px;
       position: relative;
       border-radius: 100px 0 0 100px;
       overflow: hidden; }
@@ -455,6 +455,9 @@ img {
 .fz-10 {
   font-size: 10px; }
 
+.fz-0 {
+  font-size: 0; }
+
 .lh-2 {
   line-height: 2; }
 
@@ -510,7 +513,6 @@ img {
     background: #1c222a; }
 
 .row-1 {
-  line-height: 2;
   margin-left: -4px !important;
   margin-right: -4px !important; }
   .row-1 > [class*="col"] {
