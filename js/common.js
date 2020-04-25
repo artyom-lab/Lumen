@@ -7,6 +7,7 @@ $(document).on('click.bs.dropdown.data-api', '.dropdown-menu', function (e) {
 $(".owl-4").owlCarousel({
   items: 1,
   smartSpeed: 1200,
+  touchDrag: false,
   mouseDrag: false,
 });
 

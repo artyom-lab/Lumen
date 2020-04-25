@@ -458,6 +458,9 @@ img {
 .fz-0 {
   font-size: 0; }
 
+.lh-22 {
+  line-height: 2.2; }
+
 .lh-2 {
   line-height: 2; }
 
@@ -545,7 +548,7 @@ img {
   display: inline-block;
   position: absolute;
   right: 14px;
-  top: -44px; }
+  top: -33px; }
   .owl-2.owl-theme .owl-dots .owl-dot span {
     margin: 12px 2px 2px; }
 .owl-2.owl-theme img {
