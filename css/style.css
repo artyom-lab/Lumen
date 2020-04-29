@@ -495,6 +495,8 @@ h1, .h1 {
     border-radius: 2px; }
     .dark-mode .scroll::-webkit-scrollbar-thumb {
       background-color: #313943; }
+  .scroll a {
+    color: #222222; }
 
 .block-wrap {
   margin-top: -15px;
@@ -663,6 +665,9 @@ h1, .h1 {
   .dark-mode .fas-3 {
     background: #0081ff; }
 
+.fas-4 {
+  line-height: 8px; }
+
 .links {
   background-image: url(../img/icon-13.png);
   background-size: cover;
@@ -802,6 +807,25 @@ h1, .h1 {
   .table-1 .progress .bar-6 {
     left: 85%; }
 
+.dark-mode .table-2 {
+  color: #FFF; }
+.table-2 th, .table-2 td {
+  vertical-align: middle;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  white-space: nowrap; }
+  .table-2 th:not(:first-child), .table-2 td:not(:first-child) {
+    text-align: center; }
+.table-2 a {
+  color: #222222; }
+.table-2 tbody tr th:first-child {
+  font-weight: normal; }
+.table-2 tbody tr td:nth-child(3), .table-2 tbody tr td:nth-child(4) {
+  font-size: 18px;
+  font-weight: bold; }
+.table-2 tbody tr + tr {
+  border-top: 1px solid #F1F1F1; }
+
 .canvas-wrap {
   flex-grow: 1;
   position: relative;
@@ -828,6 +852,10 @@ h1, .h1 {
     bottom: 0;
     left: 0;
     right: 0; }
+
+@media (min-width: 576px) {
+  .canvas-wrap-3 {
+    min-height: 290px; } }
 
 .switch-wrap {
   display: flex;
@@ -1030,9 +1058,6 @@ h1, .h1 {
 
 .dark-mode .bs-popover-bottom .arrow:after {
   border-bottom-color: #1c222a; }
-
-.dark-mode .bs-popover-left .arrow:after {
-  border-left-color: #1c222a; }
 
 .arrow-link {
   width: 20px;
