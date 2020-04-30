@@ -472,6 +472,8 @@ h1, .h1
 			background-color: #313943
 	a 
 		color: #222222
+		.dark-mode &
+			color: #FFF
 .block-wrap
 	margin-top: -15px
 	margin-bottom: -15px
@@ -810,6 +812,8 @@ h1, .h1
 			text-align: center
 	a 
 		color: #222222
+		.dark-mode &
+			color: #FFF
 	tbody 
 		tr 
 			th:first-child
@@ -820,7 +824,9 @@ h1, .h1
 					font-weight: bold
 			+ tr 
 				border-top: 1px solid #F1F1F1
-
+				.dark-mode &
+					border-top: 1px solid #313943
+				
 .canvas-wrap
 	flex-grow: 1
 	position: relative
@@ -1056,7 +1062,7 @@ h1, .h1
 			.dark-mode &
 				border-bottom-color: #1c222a
 
-// Stories
+// Stories-show
 
 .arrow-link
 	width: 20px
@@ -1089,3 +1095,28 @@ h1, .h1
 	@media(min-width: 1200px) and (max-width: 1399.98px)
 		flex: 0 0 33.333333%
 		max-width: 33.333333%
+
+// Stories-index
+
+.form-inline-1
+	.custom-select
+		font-size: 13px
+		background-color: #f1f1f6
+		border: 0
+		font-weight: bold
+		.dark-mode &
+			background-color: #1c222a
+			color: #FFF
+		&:focus 
+			box-shadow: none
+
+.pagination
+	.page-link
+		background: #f1f1f6
+		color: #000
+		border: none
+		.dark-mode &
+			color: #FFF
+			background: #1c222a
+		&:focus 
+			box-shadow: none

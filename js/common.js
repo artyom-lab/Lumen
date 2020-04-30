@@ -47,6 +47,8 @@ Waves.attach('.wave', ['waves-light']);
 Waves.attach('.wave2, .dropdown-2 .dropdown-menu a', ['waves-dark']);
 Waves.init();
 
+$('[data-toggle="popover"]').popover()
+
 var start = moment("05/12/2019"),
     end   = moment("06/11/2019");
 
@@ -60,8 +62,6 @@ $('#reportrange').daterangepicker({
 }, cb);
 
 cb(start, end);
-
-$('[data-toggle="popover"]').popover()
 
 var chartVars = {
   gradientStart: 'rgba(233, 233, 237, 1)',
@@ -133,7 +133,7 @@ Chart.controllers.ShadowLine = Chart.controllers.line.extend({
 
 var chart    = document.getElementById('canvas').getContext('2d'),
     gradient = chart.createLinearGradient(0, 0, 0, 320),
-    gradient2 = chart.createLinearGradient(0, 0, 0, 320);
+    gradient2 = chart.createLinearGradient(0, 0, 0, 280);
 
 gradient.addColorStop(0, chartVars.gradientStart);
 gradient.addColorStop(1, chartVars.gradientStop);
@@ -250,7 +250,7 @@ var chartInstance = new Chart(chart, {
 });
 
 var chart2    = document.getElementById('canvas2').getContext('2d'),
-    gradient4 = chart2.createLinearGradient(0, 0, 0, 100);
+    gradient4 = chart2.createLinearGradient(0, 0, 0, 80);
 
 gradient4.addColorStop(0, '#02d79c');
 gradient4.addColorStop(0.25, '#4afd3b');
