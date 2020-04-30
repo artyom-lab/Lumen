@@ -155,7 +155,7 @@ var data  = {
     datasets: [{
       label: '',
       backgroundColor: gradient,
-      borderWidth: 7,
+      borderWidth: 10,
       pointRadius: 5,
       pointBorderWidth: 3,
       pointBorderColor: 'transparent',
