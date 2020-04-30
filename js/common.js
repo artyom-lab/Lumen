@@ -138,11 +138,11 @@ var chart    = document.getElementById('canvas').getContext('2d'),
 gradient.addColorStop(0, chartVars.gradientStart);
 gradient.addColorStop(1, chartVars.gradientStop);
 
-gradient2.addColorStop(0, '#02d79c');
-gradient2.addColorStop(0.25, '#4afd3b');
+gradient2.addColorStop(0, '#fb5d46');
+gradient2.addColorStop(0.25, '#fca033');
 gradient2.addColorStop(0.5, '#f8d217');
-gradient2.addColorStop(0.75, '#fca033');
-gradient2.addColorStop(1, '#fb5d46');
+gradient2.addColorStop(0.75, '#4afd3b');
+gradient2.addColorStop(1, '#02d79c');
 
 Chart.defaults.global.defaultFontColor = chartVars.fontColor;
 Chart.defaults.global.defaultFontFamily = '"Roboto", sans-serif';
@@ -252,11 +252,11 @@ var chartInstance = new Chart(chart, {
 var chart2    = document.getElementById('canvas2').getContext('2d'),
     gradient4 = chart2.createLinearGradient(0, 0, 0, 80);
 
-gradient4.addColorStop(0, '#02d79c');
-gradient4.addColorStop(0.25, '#4afd3b');
+gradient4.addColorStop(0, '#fb5d46');
+gradient4.addColorStop(0.25, '#fca033');
 gradient4.addColorStop(0.5, '#f8d217');
-gradient4.addColorStop(0.75, '#fca033');
-gradient4.addColorStop(1, '#fb5d46');
+gradient4.addColorStop(0.75, '#4afd3b');
+gradient4.addColorStop(1, '#02d79c');
 
 var data2  = {
     labels: ["", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", ""],
