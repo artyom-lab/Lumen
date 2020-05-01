@@ -9,6 +9,9 @@
 .blue {
   color: #05a7ff; }
 
+.orange {
+  color: #e88903; }
+
 .gray {
   color: #b9b9b9; }
 
@@ -1122,5 +1125,10 @@ h1, .h1 {
     background: #1c222a; }
   .pagination .page-link:focus {
     box-shadow: none; }
+
+@media(min-width: 1366px) {
+  .col-xl-24 {
+    flex: 0 0 20%;
+    max-width: 20%; } }
 
 /*# sourceMappingURL=style.css.map */
