@@ -748,7 +748,8 @@ h1, .h1 {
 .table-1 th, .table-1 td {
   padding-left: 0;
   padding-right: 0;
-  vertical-align: middle; }
+  vertical-align: middle;
+  font-weight: normal; }
 .table-1 thead tr th {
   font-weight: normal !important; }
 .table-1 tr th:first-child {
