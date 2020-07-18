@@ -307,5 +307,26 @@ var chartInstance2 = new Chart(chart2, {
   options: options2
 });
 
+$('input[name="birthday1"]').daterangepicker({
+  singleDatePicker: true,
+  showDropdowns: true,
+  minYear: 2000,
+  maxYear: parseInt(moment().format('YYYY'),10)
 });
+
+});
+
+
+  var s3Uploader = new qq.FineUploader({
+    element: document.getElementById('fine-uploader-s3'),
+    template: 'qq-template-s3'
+  });
+  var s32Uploader = new qq.FineUploader({
+    element: document.getElementById('fine-uploader-s3-2'),
+    template: 'qq-template-s3-2'
+  });
+  var s33Uploader = new qq.FineUploader({
+    element: document.getElementById('fine-uploader-s3-3'),
+    template: 'qq-template-s3-3'
+  });
 

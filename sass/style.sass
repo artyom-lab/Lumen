@@ -69,7 +69,7 @@ img
 	max-width: 100%
 	height: auto
 
-.dropdown-menu, .daterangepicker 
+.dropdown-menu, .daterangepicker
 	box-shadow: 0 1px 20px rgba(0, 0, 0, .1)
 
 .sidebar-1, .navbar, .content, .sidebar-2
@@ -541,19 +541,21 @@ h1, .h1
 		+ .fa-chevron-right
 			opacity: .6
 
-.daterangepicker
+.daterangepicker:not(.single)
 	top: 60px !important
 	right: 20px !important
 	position: fixed
 	overflow: auto
 	border: 0
 	max-height: calc(100vh - 124px)
-	.dark-mode & 
-		background: #1c222a
 	@media (max-width: 339.98px)
 		max-height: calc(100vh - 144px)
 	&:before, &:after, .drp-selected
 		display: none
+
+.daterangepicker
+	.dark-mode & 
+		background: #1c222a
 	.drp-buttons 
 		.dark-mode & 
 			border-top: 1px solid #313943	
@@ -1134,3 +1136,153 @@ h1, .h1
 	@media(min-width: 1366px)
 		flex: 0 0 20%
 		max-width: 20%
+
+// PITCHES
+
+.container-pitches
+	padding-left: 15px
+	padding-right: 15px
+	@media(min-width: 576px)
+		padding-left: 50px
+		padding-right: 50px
+	@media(min-width: 1450px)
+		padding-left: 110px
+		padding-right: 110px
+	@media(min-width: 1550px)
+		padding-right: 220px
+	.nav-pills 
+		.nav-link
+			font-size: 14px
+			text-align: center
+			color: #c8c8c8
+			margin-bottom: 28px
+			position: relative
+			padding-top: 4px
+			padding-bottom: 4px
+			padding-left: 30px
+			.pills-number
+				position: absolute
+				top: 50%
+				height: 21px
+				width: 21px
+				background: #f1f1f6
+				color: #FFF
+				border-radius: 100px
+				left: 4px	
+				transform: translateY(-50%)
+				.dark-mode &
+					background: #313946
+			&.active 
+				background: #f1f1f6
+				color: #000
+				font-weight: bold
+				.dark-mode &
+					background: #313946
+					color: #FFF
+				.pills-number
+					background: #FFF
+					color: #000
+			&:not(:last-child)
+				&:before 
+					content: ''
+					position: absolute
+					top: calc(100% + 2px)
+					left: 50%
+					height: 24px
+					border-left: 1px dotted #dadada
+					transform: translateX(-50%)
+
+.form-search-2
+	input
+		padding-top: 4px
+		padding-bottom: 4px
+		height: 34px
+		margin-top: 12px
+		margin-bottom: 12px
+		width: 100% !important
+		font-size: 14px
+		&::-webkit-input-placeholder
+			color: #a2a2a2
+		&::-moz-placeholder
+			color: #a2a2a2
+		&:-ms-input-placeholder
+			color: #a2a2a2
+		&:focus
+			box-shadow: none
+		.dark-mode &
+			background: #313946
+			border-color: #313946
+			color: #FFF
+
+.form-inline-2
+	.custom-select
+		background: #fff url(../img/arrow.png) no-repeat right .75rem center/8px 6px
+		padding-top: 4px
+		padding-bottom: 4px
+		height: 34px
+		font-size: 14px
+		&:focus 
+			box-shadow: none
+		.dark-mode &
+			background: #313946 url(../img/arrow.png) no-repeat right .75rem center/8px 6px
+			border-color: #313946
+			color: #FFF
+
+.calendar-pitches
+	position: absolute 
+	top: 50%
+	right: 10px
+	transform: translateY(-50%)
+
+.form-control-pitches
+	&:focus
+		box-shadow: none
+	font-size: 14px
+	color: #a2a2a2
+	.dark-mode &
+		background: #313946
+		border-color: #313946
+		color: #FFF
+
+.form-textarea
+	height: 180px !important
+	resize: none
+	padding: 16px
+	font-size: 14px
+	&:focus 
+		box-shadow: none
+	.dark-mode &
+		background: #313946
+		border-color: #313946
+		color: #FFF
+
+.qq-gallery.qq-uploader
+	background-color: #FFF
+	min-height: 155px
+	.qq-upload-fail
+		z-index: 99
+	&:before 
+		font-size: 14px
+		opacity: 1
+	.dark-mode &
+		background: #313946
+		border-color: #313946
+		color: #FFF
+
+.plus
+	height: 16px
+	width: 16px
+	display: inline-block
+	border-radius: 100px
+	background: #2c8bf3
+	color: #FFF
+	text-align: center
+	line-height: 16px
+	&:hover
+		color: #FFF
+
+.btn-pitches
+	max-width: 160px
+	width: 100%
+
+
