@@ -42,15 +42,18 @@ body {
   @media (min-width: 1200px) {
     body {
       padding-right: 300px; } }
-  @media (min-width: 2000px) {
+  @media (min-width: 1600px) {
     body {
       padding-left: 330px; } }
+  @media (min-width: 1950px) {
+    body {
+      padding-right: 0; } }
   @media (min-width: 992px) {
     body.menubar-1 {
       padding-left: 0; }
       body.menubar-1 .sidebar-1 {
         margin-left: -220px; } }
-    @media (min-width: 992px) and (min-width: 2000px) {
+    @media (min-width: 992px) and (min-width: 1600px) {
       body.menubar-1 .sidebar-1 {
         margin-left: -330px; } }
 
@@ -95,10 +98,6 @@ img {
   .w-190 {
     flex-basis: 190px;
     width: 190px; } }
-@media (min-width: 2000px) {
-  .w-190 {
-    flex-basis: 400px;
-    width: 400px; } }
 
 .fwm {
   font-weight: 500; }
@@ -225,7 +224,7 @@ h1, .h1 {
     .sidebar-1 {
       left: auto;
       right: 100%; } }
-  @media (min-width: 2000px) {
+  @media (min-width: 1600px) {
     .sidebar-1 {
       width: 330px; } }
 
@@ -346,6 +345,11 @@ h1, .h1 {
   background-color: #fff; }
   .sidebar-2::-webkit-scrollbar {
     display: none; }
+  @media (min-width: 1950px) {
+    .sidebar-2 {
+      margin-top: 20px;
+      margin-bottom: 20px;
+      border-radius: 8px; } }
   .dark-mode .sidebar-2 {
     background-color: #252b35; }
   @media (min-width: 1200px) {
@@ -1290,5 +1294,14 @@ h1, .h1 {
 .btn-pitches {
   max-width: 160px;
   width: 100%; }
+
+@media (min-width: 1950px) {
+  .w-1550 {
+    max-width: 1550px;
+    margin-left: auto;
+    margin-right: auto; }
+    .w-1550 .sidebar-2 {
+      position: initial;
+      max-height: initial; } }
 
 /*# sourceMappingURL=style.css.map */

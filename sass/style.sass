@@ -36,14 +36,16 @@ body
 		padding-left: 220px
 	@media (min-width: 1200px)
 		padding-right: 300px
-	@media (min-width: 2000px)
+	@media (min-width: 1600px)
 		padding-left: 330px
+	@media (min-width: 1950px)
+		padding-right: 0
 	&.menubar-1
 		@media (min-width: 992px)
 			padding-left: 0
 			.sidebar-1
 				margin-left: -220px
-				@media (min-width: 2000px)
+				@media (min-width: 1600px)
 					margin-left: -330px
 		@media (max-width: 991.98px)
 			overflow: hidden
@@ -83,9 +85,6 @@ img
 	@media (min-width: 768px)
 		flex-basis: 190px
 		width: 190px
-	@media (min-width: 2000px)
-		flex-basis: 400px
-		width: 400px
 
 .fwm
 	font-weight: 500
@@ -198,7 +197,7 @@ h1, .h1
 	@media (max-width: 991.98px)	
 		left: auto
 		right: 100%
-	@media (min-width: 2000px)
+	@media (min-width: 1600px)
 		width: 330px
 
 .sidebar-top
@@ -321,6 +320,10 @@ h1, .h1
 	&::-webkit-scrollbar
 		display: none
 	background-color: #fff
+	@media (min-width: 1950px)
+		margin-top: 20px
+		margin-bottom: 20px
+		border-radius: 8px
 	.dark-mode &
 		background-color: #252b35
 	@media (min-width: 1200px)	
@@ -1294,4 +1297,11 @@ h1, .h1
 	max-width: 160px
 	width: 100%
 
-
+.w-1550
+	@media (min-width: 1950px)
+		max-width: 1550px
+		margin-left: auto
+		margin-right: auto
+		.sidebar-2 
+			position: initial
+			max-height: initial
