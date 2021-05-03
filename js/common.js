@@ -38,7 +38,7 @@ $("#sandwich-1").on("click", function() {
   window.dispatchEvent(new Event('resize'));
 });
 
-$("#sandwich-2").on("click", function() {
+$("#sandwich-2").on("click", function() { 
 	$(this).toggleClass("active");
 	$("body").toggleClass("menubar-2");
 });
@@ -329,4 +329,5 @@ $('input[name="birthday1"]').daterangepicker({
     element: document.getElementById('fine-uploader-s3-3'),
     template: 'qq-template-s3-3'
   });
+
 
