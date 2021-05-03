@@ -42,7 +42,7 @@ body {
   @media (min-width: 1200px) {
     body {
       padding-right: 300px; } }
-  @media (min-width: 1920px) {
+  @media (min-width: 2000px) {
     body {
       padding-left: 330px; } }
   @media (min-width: 992px) {
@@ -50,7 +50,7 @@ body {
       padding-left: 0; }
       body.menubar-1 .sidebar-1 {
         margin-left: -220px; } }
-    @media (min-width: 992px) and (min-width: 1920px) {
+    @media (min-width: 992px) and (min-width: 2000px) {
       body.menubar-1 .sidebar-1 {
         margin-left: -330px; } }
 
@@ -95,7 +95,7 @@ img {
   .w-190 {
     flex-basis: 190px;
     width: 190px; } }
-@media (min-width: 1920px) {
+@media (min-width: 2000px) {
   .w-190 {
     flex-basis: 400px;
     width: 400px; } }
@@ -225,7 +225,7 @@ h1, .h1 {
     .sidebar-1 {
       left: auto;
       right: 100%; } }
-  @media (min-width: 1920px) {
+  @media (min-width: 2000px) {
     .sidebar-1 {
       width: 330px; } }
 
