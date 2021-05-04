@@ -29,6 +29,8 @@ body
 	position: relative
 	color: #222222
 	background-color: #EFEFF4
+	@media (min-width: 2050px)
+		font-size: 18px
 	&.dark-mode 
 		color: #FFF
 		background-color: #1a1d21
@@ -36,16 +38,16 @@ body
 		padding-left: 220px
 	@media (min-width: 1200px)
 		padding-right: 300px
-	@media (min-width: 1600px)
+	@media (min-width: 2050px)
 		padding-left: 330px
-	@media (min-width: 1950px)
+	@media (min-width: 2050px)
 		padding-right: 0
 	&.menubar-1
 		@media (min-width: 992px)
 			padding-left: 0
 			.sidebar-1
 				margin-left: -220px
-				@media (min-width: 1600px)
+				@media (min-width: 2050px)
 					margin-left: -330px
 		@media (max-width: 991.98px)
 			overflow: hidden
@@ -85,6 +87,9 @@ img
 	@media (min-width: 768px)
 		flex-basis: 190px
 		width: 190px
+	@media (min-width: 2050px)
+		flex-basis: 380px
+		width: 380px
 
 .fwm
 	font-weight: 500
@@ -130,22 +135,38 @@ h1, .h1
 	font-size: 30px
 .fz-18
 	font-size: 18px
+	@media (min-width: 2050px)
+		font-size: 20px
 .fz-16
 	font-size: 16px
+	@media (min-width: 2050px)
+		font-size: 20px
 .fz-14
 	font-size: 14px
+	@media (min-width: 2050px)
+		font-size: 18px
 .fz-13
 	font-size: 13px
+	@media (min-width: 2050px)
+		font-size: 18px
 .fz-12
 	font-size: 12px
+	@media (min-width: 2050px)
+		font-size: 16px
 .fz-11
 	font-size: 11px
+	@media (min-width: 2050px)
+		font-size: 16px
 .fz-11a
 	font-size: 9px
 	@media (min-width: 576px)	
 		font-size: 11px
+	@media (min-width: 2050px)
+		font-size: 16px
 .fz-10
 	font-size: 10px
+	@media (min-width: 2050px)
+		font-size: 14px
 .fz-0
 	font-size: 0
 
@@ -197,7 +218,7 @@ h1, .h1
 	@media (max-width: 991.98px)	
 		left: auto
 		right: 100%
-	@media (min-width: 1600px)
+	@media (min-width: 2050px)
 		width: 330px
 
 .sidebar-top
@@ -265,6 +286,8 @@ h1, .h1
 				padding-bottom: 0
 				padding-top: 0
 				height: 27px
+				@media (min-width: 2050px)
+					font-size: 16px
 				.dark-mode &
 					background: #313946
 					border-color: #313946
@@ -320,9 +343,10 @@ h1, .h1
 	&::-webkit-scrollbar
 		display: none
 	background-color: #fff
-	@media (min-width: 1950px)
+	@media (min-width: 2050px)
 		margin-top: 20px
 		margin-bottom: 20px
+		margin-right: 20px
 		border-radius: 8px
 	.dark-mode &
 		background-color: #252b35
@@ -376,6 +400,8 @@ h1, .h1
 			padding: 5px 15px
 			font-size: 12px
 			color: #222222
+			@media (min-width: 2050px)
+				font-size: 16px
 			.dark-mode &
 				color: #FFF
 			&:hover, &:active, &:focus
@@ -892,6 +918,8 @@ h1, .h1
 		max-width: 100%
 		font-size: 12px 
 		color: #222222 
+		@media (min-width: 2050px)
+			font-size: 16px
 		.dark-mode &
 			color: #FFF
 	.lever
@@ -1172,6 +1200,8 @@ h1, .h1
 			padding-top: 4px
 			padding-bottom: 4px
 			padding-left: 30px
+			@media (min-width: 2050px)
+				font-size: 20px
 			.pills-number
 				position: absolute
 				top: 50%
@@ -1182,6 +1212,9 @@ h1, .h1
 				border-radius: 100px
 				left: 4px	
 				transform: translateY(-50%)
+				@media (min-width: 2050px)
+					height: 29px
+					width: 29px
 				.dark-mode &
 					background: #313946
 			&.active 
@@ -1298,10 +1331,11 @@ h1, .h1
 	width: 100%
 
 .w-1550
-	@media (min-width: 1950px)
-		max-width: 1550px
+	@media (min-width: 2050px)
+		// max-width: 1550px
 		margin-left: auto
 		margin-right: auto
 		.sidebar-2 
 			position: initial
 			max-height: initial
+			width: 380px
