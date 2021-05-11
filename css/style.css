@@ -1205,9 +1205,6 @@ h1, .h1 {
     padding-top: 4px;
     padding-bottom: 4px;
     padding-left: 30px; }
-    @media (min-width: 1950px) {
-      .container-pitches .nav-pills .nav-link {
-        font-size: 15px; } }
     .container-pitches .nav-pills .nav-link .pills-number {
       position: absolute;
       top: 50%;
@@ -1218,10 +1215,6 @@ h1, .h1 {
       border-radius: 100px;
       left: 4px;
       transform: translateY(-50%); }
-      @media (min-width: 1950px) {
-        .container-pitches .nav-pills .nav-link .pills-number {
-          height: 29px;
-          width: 29px; } }
       .dark-mode .container-pitches .nav-pills .nav-link .pills-number {
         background: #313946; }
     .container-pitches .nav-pills .nav-link.active {
